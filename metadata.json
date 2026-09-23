@@ -1,0 +1,8 @@
+{
+  "name": "Sorriso Reality - Clínicas Odontológicas",
+  "description": "Clínica Odontológica em Lapa, São Paulo. Dr. José Ricardo Guerra. Avaliação gratuita, atendimento sem agendamento prévio, implantes, ortodontia, clareamento e clínica geral.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
