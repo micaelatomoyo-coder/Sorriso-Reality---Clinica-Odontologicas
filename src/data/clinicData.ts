@@ -77,7 +77,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Diagnóstico precoce de cáries e gengivite",
       "Polimento dental para sorriso suave e higiênico"
     ],
-    image: "/src/assets/images/service_general_1790182380349.jpg",
+    image: "/images/service_general.jpg",
     iconName: "Stethoscope",
     timeEstimate: "30 a 45 minutos",
     walkInAvailable: true,
@@ -93,7 +93,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Tratamento com produtos certificados pela ANVISA",
       "Opção de facetas em resina para harmonizar o formato"
     ],
-    image: "/src/assets/images/service_whitening_1790182308552.jpg",
+    image: "/images/service_whitening.jpg",
     iconName: "Sparkles",
     popular: true,
     timeEstimate: "1 sessão de 50 min ou kit caseiro",
@@ -110,7 +110,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Preservação da estrutura óssea do maxilar",
       "Condições e parcelamento facilitado em até 12x"
     ],
-    image: "/src/assets/images/service_implants_1790182345313.jpg",
+    image: "/images/service_implants.jpg",
     iconName: "ShieldCheck",
     popular: true,
     timeEstimate: "Planejamento sob medida",
@@ -127,7 +127,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Aparelhos confortáveis com menos atrito nas bochechas",
       "Avaliação e moldagem com planejamento digital"
     ],
-    image: "/src/assets/images/service_aligner_1790182328640.jpg",
+    image: "/images/service_aligner.jpg",
     iconName: "Smile",
     popular: true,
     timeEstimate: "Manutenção mensal 20 min",
@@ -144,7 +144,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Aplicação de selantes e flúor protetor contra cáries",
       "Ambiente relaxante que gera confiança desde a infância"
     ],
-    image: "/src/assets/images/service_pediatric_1790182362292.jpg",
+    image: "/images/service_pediatric.jpg",
     iconName: "HeartHandshake",
     timeEstimate: "30 a 40 minutos",
     walkInAvailable: true,
@@ -160,7 +160,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Tratamento de canal (endodontia) moderno e indolor",
       "Conserto imediato de dentes fraturados ou provisórios"
     ],
-    image: "/src/assets/images/service_emergency_1790182401584.jpg",
+    image: "/images/service_emergency.jpg",
     iconName: "Activity",
     popular: true,
     timeEstimate: "Atendimento imediato prioritário",

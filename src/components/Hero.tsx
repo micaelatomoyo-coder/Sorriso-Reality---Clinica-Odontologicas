@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
       */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[54%] xl:w-[58%] h-full z-0 pointer-events-none select-none">
         <img
-          src="/src/assets/images/hero_patient_neutral_bokeh_1790185604750.jpg"
+          src="/images/hero_patient.jpg"
           alt="Paciente sorridente com dentes brancos na moderna cadeira odontológica verde da clínica Sorriso Reality na Lapa"
           className="w-full h-full object-cover object-[right_center] lg:object-[82%_center]"
           loading="eager"

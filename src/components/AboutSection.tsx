@@ -37,7 +37,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal }
               {/* Main Clinic Interior Picture */}
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 aspect-16/10">
                 <img
-                  src="/src/assets/images/clinic_interior_1790182254108.jpg"
+                  src="/images/clinic_interior.jpg"
                   alt="Consultório moderno Sorriso Reality na Lapa"
                   className="w-full h-full object-cover transform hover:scale-102 transition-transform duration-700"
                   loading="lazy"
@@ -53,7 +53,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal }
                 className="mt-4 sm:mt-0 sm:absolute sm:-bottom-8 sm:-right-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3.5 max-w-xs sm:max-w-sm"
               >
                 <img
-                  src="/src/assets/images/dentist_portrait_1790182271055.jpg"
+                  src="/images/dentist_portrait.jpg"
                   alt="Dr. José Ricardo Guerra - Cirurgião Dentista"
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover shrink-0 border-2 border-emerald-500"
                   loading="lazy"

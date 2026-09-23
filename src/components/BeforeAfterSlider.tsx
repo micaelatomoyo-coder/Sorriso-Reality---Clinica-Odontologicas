@@ -11,7 +11,7 @@ export const BeforeAfterSlider: React.FC = () => {
       title: "Clareamento & Estética Dental",
       subtitle: "Remoção de amarelado e manchas com clareamento profissional e restauração estética.",
       beforeImg: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
-      afterImg: "/src/assets/images/service_whitening_1790182308552.jpg",
+      afterImg: "/images/service_whitening.jpg",
       timeframe: "Realizado em 2 sessões",
       tag: "Clareamento a Laser"
     },
@@ -19,7 +19,7 @@ export const BeforeAfterSlider: React.FC = () => {
       title: "Alinhamento & Ortodontia",
       subtitle: "Correção de apinhamento e mordida aberta com alinhadores transparentes.",
       beforeImg: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80",
-      afterImg: "/src/assets/images/service_aligner_1790182328640.jpg",
+      afterImg: "/images/service_aligner.jpg",
       timeframe: "Tratamento de 8 meses",
       tag: "Alinhador Invisível"
     }
