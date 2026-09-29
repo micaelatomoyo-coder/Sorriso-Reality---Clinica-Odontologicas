@@ -5,7 +5,7 @@ import { CLINIC_INFO } from '../data/clinicData';
 
 export const InstagramSection: React.FC = () => {
   useEffect(() => {
-    // If the script is already loaded by index.html or previous mount, trigger Elfsight update
+    // If the Elfsight script is already loaded, trigger platform update/init
     const win = window as any;
     if (win.eapps?.platform?.init) {
       try {
@@ -83,7 +83,7 @@ export const InstagramSection: React.FC = () => {
         <div className="w-full rounded-2xl bg-white/70 p-2 sm:p-5 border border-slate-200/80 shadow-sm backdrop-blur-xs min-h-[380px]">
           {/* Elfsight Instagram Feed | Untitled Instagram Feed */}
           <div 
-            className="elfsight-app-24b429ec-0548-49d8-98ad-ad9056b818d2" 
+            className="elfsight-app-e10e351b-0f7c-4553-8a62-deebd799e5ed" 
             data-elfsight-app-lazy
           />
         </div>
