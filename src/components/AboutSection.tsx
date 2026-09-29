@@ -209,7 +209,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               >
                 <iframe 
                   ref={videoIframeRef}
-                  src="https://player.vimeo.com/video/1231391663?badge=0&autopause=0&player_id=0&app_id=58479%2Fembed" 
+                  src="https://player.vimeo.com/video/1231391663?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479%2Fembed" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen 
