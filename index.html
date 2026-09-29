@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Favicon & Icons -->
-    <link rel="icon" type="image/png" href="/favcon.png" />
-    <link rel="shortcut icon" href="/favcon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/favcon.png" />
+    <link rel="icon" type="image/png" href="/logosr1.png" />
+    <link rel="shortcut icon" href="/logosr1.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logosr1.png" />
     <meta name="theme-color" content="#008744" />
+    <link rel="canonical" href="https://sorrisoreality.com.br/" />
     
     <!-- Primary SEO Metadata -->
     <title>Sorriso Reality - Clínicas Odontológicas | Lapa - SP (26 Anos)</title>
@@ -23,14 +24,15 @@
     <meta property="og:site_name" content="Sorriso Reality Clínicas Odontológicas" />
     <meta property="og:title" content="Sorriso Reality - Clínicas Odontológicas na Lapa (26 Anos)" />
     <meta property="og:description" content="26 anos de tradição na Lapa, equipe completa de dentistas especialistas, avaliação gratuita e atendimento com ou sem agendamento na Rua Doze de Outubro, 651." />
-    <meta property="og:image" content="/favcon.png" />
+    <meta property="og:image" content="/logosr1.png" />
+    <meta property="og:url" content="https://sorrisoreality.com.br/" />
     <meta property="og:locale" content="pt_BR" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Sorriso Reality - Clínicas Odontológicas | Lapa - SP" />
     <meta name="twitter:description" content="Avaliação gratuita, equipe especializada e mais de 26 anos cuidando do sorriso das famílias na Lapa, São Paulo." />
-    <meta name="twitter:image" content="/favcon.png" />
+    <meta name="twitter:image" content="/logosr1.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,11 +45,11 @@
       "@context": "https://schema.org",
       "@type": "Dentist",
       "name": "Sorriso Reality Clínicas Odontológicas",
-      "image": "/favcon.png",
-      "logo": "/favcon.png",
+      "image": "/logosr1.png",
+      "logo": "/logosr1.png",
       "description": "Clínica odontológica tradicional no centro comercial da Lapa, São Paulo, fundada em julho de 2000. Equipe de dentistas experientes, avaliação gratuita e tratamentos completos.",
       "url": "https://sorrisoreality.com.br",
-      "telephone": "+551138318625",
+      "telephone": "+5511971012603",
       "priceRange": "$$",
       "currenciesAccepted": "BRL",
       "paymentAccepted": "Cash, Credit Card, Debit Card, PIX",
@@ -68,14 +70,14 @@
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
+          "opens": "09:00",
           "closes": "18:00"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "12:00"
+          "opens": "09:00",
+          "closes": "13:00"
         }
       ],
       "founder": [
@@ -96,16 +98,22 @@
     <!-- Elfsight Platform Script -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
     
-    <!-- ResizeObserver Error Suppressor -->
+    <!-- Third-Party Embeds & ResizeObserver Error Suppressor -->
     <script>
       (function() {
-        var isResizeObserverError = function(err) {
-          var msg = (err && (err.message || err.toString())) || '';
-          return typeof msg === 'string' && msg.indexOf('ResizeObserver') !== -1;
+        var isBenignThirdPartyError = function(err) {
+          var msg = (err && (err.message || (typeof err === 'string' ? err : err.toString()))) || '';
+          return (
+            msg.indexOf('ResizeObserver') !== -1 ||
+            msg.indexOf('Instagram') !== -1 ||
+            msg.indexOf('Failed to fetch') !== -1 ||
+            msg.indexOf('elfsight') !== -1 ||
+            msg.indexOf('vimeo') !== -1
+          );
         };
 
         window.addEventListener('error', function(e) {
-          if (isResizeObserverError(e)) {
+          if (isBenignThirdPartyError(e)) {
             e.stopImmediatePropagation();
             e.stopPropagation();
             if (e.preventDefault) e.preventDefault();
@@ -114,7 +122,7 @@
         }, true);
 
         window.addEventListener('unhandledrejection', function(e) {
-          if (isResizeObserverError(e && e.reason)) {
+          if (isBenignThirdPartyError(e && e.reason)) {
             e.stopImmediatePropagation();
             e.stopPropagation();
             if (e.preventDefault) e.preventDefault();
@@ -124,7 +132,7 @@
 
         var prevOnError = window.onerror;
         window.onerror = function(message, source, lineno, colno, error) {
-          if (isResizeObserverError(message) || isResizeObserverError(error)) {
+          if (isBenignThirdPartyError(message) || isBenignThirdPartyError(error)) {
             return true;
           }
           if (typeof prevOnError === 'function') {

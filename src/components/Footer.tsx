@@ -174,13 +174,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
                     href={`tel:${CLINIC_INFO.phoneRaw}`}
                     className="hover:text-white font-semibold"
                   >
-                    WhatsApp: {CLINIC_INFO.phone}
-                  </a>
-                  <a
-                    href="tel:551126671294"
-                    className="hover:text-white text-emerald-200/80"
-                  >
-                    Fixo: (11) 2667-1294
+                    Telefone / WhatsApp: {CLINIC_INFO.phone}
                   </a>
                 </div>
               </div>

@@ -230,8 +230,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
                 <strong>Endereço Oficial:</strong> R. 12 de Outubro, 651 - Lapa (São Paulo - SP)
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <span><strong>Telefone:</strong> {CLINIC_INFO.landlinePhone}</span>
-                <span><strong>WhatsApp:</strong> {CLINIC_INFO.phone}</span>
+                <span><strong>WhatsApp / Telefone:</strong> {CLINIC_INFO.phone}</span>
                 <span><strong>Instagram:</strong> {CLINIC_INFO.instagramHandle}</span>
                 <span><strong>Facebook:</strong> {CLINIC_INFO.facebookPage}</span>
               </div>
@@ -560,8 +559,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
 
           <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500">
             <span>📍 Rua Doze de Outubro, 651 - Lapa</span>
-            <span>📞 Fixo: (11) 2667-1294</span>
-            <span>📱 WhatsApp: (11) 97101-2603</span>
+            <span>📱 Telefone &amp; WhatsApp: (11) 97101-2603</span>
             <span>📸 Instagram: @clinicas.sorrisoreality</span>
           </div>
         </section>

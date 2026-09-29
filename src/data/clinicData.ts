@@ -68,7 +68,6 @@ export const CLINIC_INFO = {
     image: "/images/dentist_ricardo.png",
     experienceYears: 25,
   },
-  landlinePhone: "(11) 2667-1294",
   phone: "(11) 97101-2603",
   phoneRaw: "5511971012603",
   whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality%20Lapa.",
@@ -155,7 +154,7 @@ Agradecemos aos nossos pacientes e colaboradores!
 Sorriso Reality, há 25 anos atendendo e atendendo bem!
 
 R. 12 de Outubro 651 Lapa
-Telefone (11)2667-1294  WhatsApp (11)97101-2603
+WhatsApp / Telefone: (11) 97101-2603
 Instagram: @clinicas.sorrisoreality  Facebook: Clínicas Sorriso Reality`
   },
   milestones: [
