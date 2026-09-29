@@ -120,7 +120,7 @@ export const Testimonials: React.FC = () => {
             </div>
             <div className="text-xs text-slate-700">
               <strong className="block text-slate-900">Nota 4.9 de 5.0 no Google Avaliações</strong>
-              <span>Mais de 380 pacientes verificados recomendam o Dr. José Ricardo Guerra</span>
+              <span>Mais de 380 pacientes verificados recomendam a Sorriso Reality</span>
             </div>
           </div>
 

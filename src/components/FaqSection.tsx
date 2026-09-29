@@ -118,7 +118,7 @@ export const FaqSection: React.FC = () => {
         >
           <div className="text-left">
             <h4 className="text-sm font-bold text-slate-900">Ainda tem alguma dúvida específica?</h4>
-            <p className="text-xs text-slate-500">Nossa recepção e o Dr. José Ricardo Guerra estão prontos para te atender.</p>
+            <p className="text-xs text-slate-500">Nossa recepção e a equipe de dentistas da Sorriso Reality estão prontos para te atender.</p>
           </div>
           <a
             href={CLINIC_INFO.whatsappUrl}

@@ -47,9 +47,9 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
 
     let text = '';
     if (mode === 'walkin') {
-      text = `Olá, Dr. José Ricardo Guerra! Meu nome é *${patientName.trim() || 'Paciente'}*. Estou a caminho da clínica Sorriso Reality na Rua Doze de Outubro, 651 para atendimento sem agendamento (urgência/avaliação).`;
+      text = `Olá, equipe Sorriso Reality! Meu nome é *${patientName.trim() || 'Paciente'}*. Estou a caminho da clínica na Rua Doze de Outubro, 651 para atendimento sem agendamento (urgência/avaliação).`;
     } else {
-      text = `Olá, Dr. José Ricardo Guerra da Sorriso Reality Lapa! Gostaria de agendar minha *Avaliação Gratuita*:\n\n` +
+      text = `Olá, equipe da Sorriso Reality Lapa! Gostaria de agendar minha *Avaliação Gratuita*:\n\n` +
         `👤 *Nome:* ${patientName.trim() || 'Não informado'}\n` +
         `📱 *Telefone:* ${patientPhone.trim() || 'Não informado'}\n` +
         `🦷 *Tratamento de interesse:* ${selectedService}\n` +
@@ -59,7 +59,17 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
     }
 
     const url = `https://wa.me/${CLINIC_INFO.phoneRaw}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      window.location.href = url;
+    }
   };
 
   return (
@@ -133,7 +143,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                       <span>É só chegar e ser bem-vindo!</span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      Na <strong>Sorriso Reality</strong>, você não precisa ficar esperando semanas por uma consulta. Você pode comparecer diretamente à clínica dentro do horário comercial e será atendido por ordem de chegada com todo cuidado pelo <strong>Dr. José Ricardo Guerra</strong>.
+                      Na <strong>Sorriso Reality</strong>, você não precisa ficar esperando semanas por uma consulta. Você pode comparecer diretamente à clínica dentro do horário comercial e será atendido por ordem de chegada com todo cuidado por nossa equipe de dentistas especializados.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2">
                       <div className="p-3 bg-white rounded-xl border border-emerald-100">

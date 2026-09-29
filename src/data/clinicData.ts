@@ -28,20 +28,53 @@ export interface FaqItem {
   category: 'atendimento' | 'pagamento' | 'tratamentos';
 }
 
+export interface DentistMember {
+  name: string;
+  title: string;
+  cro: string;
+  specialties: string[];
+  image: string;
+}
+
 export const CLINIC_INFO = {
   name: "Sorriso Reality",
   fullName: "Sorriso Reality Clínicas Odontológicas",
-  tagline: "Sua saúde bucal é prioridade",
+  tagline: "Há 25 anos atendendo e atendendo bem!",
+  motto: "Preço justo e qualidade!",
+  experienceYears: 25,
+  dentistsPhoto: "/images/fotodentistas.png",
+  dentists: [
+    {
+      name: "Dr. José Ricardo Guerra",
+      title: "Cirurgião Dentista",
+      cro: "CRO-SP 66.961",
+      specialties: ["Clínica Geral", "Implantodontia", "Reabilitação Oral & Cirurgia"],
+      image: "/images/dentist_ricardo.png",
+    },
+    {
+      name: "Dr. José Henrique Guerra",
+      title: "Cirurgião Dentista",
+      cro: "CRO-SP 97.458",
+      specialties: ["Clínica Geral", "Ortodontia", "Harmonização Facial & Estética"],
+      image: "/images/dentist_henrique.png",
+    },
+  ],
+  // Retained for backward-compatibility
   dentist: {
     name: "Dr. José Ricardo Guerra",
     title: "Cirurgião Dentista",
-    cro: "CRO-SP 114.892",
-    specialties: ["Clínica Geral", "Implantodontia", "Reabilitação Oral & Estética"],
-    experienceYears: 12,
+    cro: "CRO-SP 66.961",
+    specialties: ["Clínica Geral", "Implantodontia", "Reabilitação Oral"],
+    image: "/images/dentist_ricardo.png",
+    experienceYears: 25,
   },
+  landlinePhone: "(11) 2667-1294",
   phone: "(11) 97101-2603",
   phoneRaw: "5511971012603",
-  whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20Dr.%20Jos%C3%A9%20Ricardo%20Guerra!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality%20Lapa.",
+  whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality%20Lapa.",
+  instagramHandle: "@clinicas.sorrisoreality",
+  instagramUrl: "https://www.instagram.com/clinicas.sorrisoreality",
+  facebookPage: "Clínicas Sorriso Reality",
   address: {
     street: "Rua Doze de Outubro, 651",
     neighborhood: "Lapa",
@@ -58,10 +91,122 @@ export const CLINIC_INFO = {
     { days: "Domingo e Feriados", hours: "Fechado (Plantão Emergencial via WhatsApp)", isClosed: true }
   ],
   stats: [
-    { number: "12+", label: "Anos de Experiência", subtitle: "Cuidado dedicado e seguro" },
-    { number: "5.000+", label: "Sorrisos Renovados", subtitle: "Pacientes felizes na Lapa" },
-    { number: "4.9", label: "Estrelas no Google", subtitle: "Mais de 380 avaliações reais" },
-    { number: "100%", label: "Avaliação Gratuita", subtitle: "Sem compromisso ou taxa" },
+    { number: "25 Anos", label: "Bodas de Prata", subtitle: "Fundada em 10 de julho de 2000 na Lapa" },
+    { number: "50.000+", label: "Pacientes Atendidos", subtitle: "História de carinho e dedicação comprovada" },
+    { number: "400 m²", label: "Clínica Térrea", subtitle: "1ª clínica térrea da Rua 12 de Outubro" },
+    { number: "100%", label: "Avaliação Gratuita", subtitle: "Preço justo e sem burocracia" },
+  ]
+};
+
+export interface HistoryMilestone {
+  year: string;
+  exactDate: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  location: string;
+}
+
+export const CLINIC_HISTORY = {
+  anniversary: "25 Anos",
+  tagline: "Há 25 anos atendendo e atendendo bem!",
+  motto: "Preço justo e qualidade!",
+  theme: "Do Sonho às Bodas de Prata (2000 - 2025)",
+  foundersPhoto: "/images/fotodentistas.png",
+  founders: [
+    {
+      name: "Dr. José Ricardo Guerra",
+      cro: "CRO-SP 66.961",
+      university: "Universidade de Odontologia de Barretos – SP",
+      specialties: ["Clínica Geral", "Implantodontia", "Reabilitação Oral", "Próteses"],
+      role: "Cirurgião Dentista • Sócio-Fundador",
+      image: "/images/dentist_ricardo.png",
+      bio: "Iniciou sua trajetória na odontologia em 10 de julho de 2000 na Rua Afonso Sardinha, nº 146 – Lapa. Formado pela Universidade de Odontologia de Barretos – SP, especializou-se em Implantes e Reabilitação, liderando a consolidação da clínica na Lapa com compromisso de preço justo, acolhimento e excelência técnica."
+    },
+    {
+      name: "Dr. José Henrique Guerra",
+      cro: "CRO-SP 97.458",
+      university: "Universidade de Odontologia de Barretos – SP",
+      specialties: ["Ortodontia", "Harmonização Facial", "Estética Dental", "Clínica Geral"],
+      role: "Cirurgião Dentista • Sócio",
+      image: "/images/dentist_henrique.png",
+      bio: "Formou-se em 2009 pela Universidade de Odontologia de Barretos – SP e integrou a equipe e sociedade da Sorriso Reality ao lado do irmão Dr. Ricardo. Especializou-se em Ortodontia e na moderna área de Harmonização Facial, agregando tecnologia e novas especialidades ao consultório."
+    }
+  ],
+  newspaperReport: {
+    source: "Jornal Nosso Bairro",
+    website: "www.jornalnossobairro.com.br",
+    email: "jnossobairro@uol.com.br",
+    headline: "Sorriso Reality 25 anos",
+    subheadline: "Do sonho à Bodas de Prata...",
+    photoCaption: "Os sócios e cirurgiões dentistas Dr. José Ricardo Guerra e Dr. José Henrique Guerra",
+    publishedDate: "10 de Julho de 2025",
+    fullText: `Neste 10 de julho 2025, a Sorriso Reality completou 25 anos de atividades com os sócios dentistas José Ricardo Guerra e José Henrique Guerra. Tudo começou lá em 10 de julho de 2000, na Rua Afonso Sardinha, nº 146 – Lapa, quando Dr Ricardo inicia sua trajetória na odontologia e em 2003 já eram 3 clínicas, sendo duas na Lapa e outra na zona leste.
+
+Em 2009, seu irmão Dr Henrique se forma e integra a equipe da Sorriso reality.
+
+Em 2010, acontece a inauguração da clínica da Av Itaberaba. E em 2020 a inauguração da unidade 12 de outubro, nº 651, também na Lapa, sendo a primeira clínica no térreo na Rua 12 de Outubro, com mais de 400m².
+
+Nesses 25 anos de história, foram mais de 50 mil clientes atendidos, todos com muito empenho e dedicação, atuando em todas áreas na odontologia, como clínica geral, próteses, ortodontia, implantes e, agora também com a área de estética e harmonização facial, sempre com sua marca, ou seja, preço justo e qualidade!
+
+Do sonho à Bodas de Prata... Formados na Universidade de Odontologia de Barretos – SP, os irmãos doutores Ricardo e Henrique, nunca se acomodaram no ofício, muitíssimo pelo contrário, ao longo do tempo, se especializaram em Ortodontia, Implantes e Harmonização Facial, entre outras; isso sem contar que a Sorriso Reality ainda conta com profissionais parceiros em todas áreas.
+
+Agradecemos aos nossos pacientes e colaboradores!
+Sorriso Reality, há 25 anos atendendo e atendendo bem!
+
+R. 12 de Outubro 651 Lapa
+Telefone (11)2667-1294  WhatsApp (11)97101-2603
+Instagram: @clinicas.sorrisoreality  Facebook: Clínicas Sorriso Reality`
+  },
+  milestones: [
+    {
+      year: "2000",
+      exactDate: "10 de Julho de 2000",
+      title: "O Primeiro Consultório na Lapa",
+      subtitle: "Rua Afonso Sardinha, nº 146",
+      description: "O Dr. José Ricardo Guerra abre as portas na Rua Afonso Sardinha, nº 146 na Lapa, inaugurando a história da Sorriso Reality com atendimento acolhedor e valores acessíveis para as famílias do bairro.",
+      location: "Rua Afonso Sardinha, 146 - Lapa",
+    },
+    {
+      year: "2003",
+      exactDate: "Ano de 2003",
+      title: "Expansão para 3 Unidades",
+      subtitle: "Reconhecimento e Demanda Crescente",
+      description: "Em apenas 3 anos de atuação, o rápido reconhecimento dos pacientes impulsionou a expansão para 3 consultórios em funcionamento (sendo duas unidades na Lapa e uma na Zona Leste).",
+      location: "Lapa e Zona Leste de São Paulo",
+    },
+    {
+      year: "2009",
+      exactDate: "Ano de 2009",
+      title: "A União dos Irmãos Dentistas",
+      subtitle: "Dr. José Henrique Guerra integra a equipe",
+      description: "O irmão Dr. José Henrique Guerra forma-se pela Universidade de Odontologia de Barretos – SP e integra a sociedade e equipe da Sorriso Reality ao lado do Dr. Ricardo, fortalecendo a união familiar e agregando as especialidades de Ortodontia e Harmonização Facial.",
+      location: "Lapa, São Paulo",
+    },
+    {
+      year: "2010",
+      exactDate: "Ano de 2010",
+      title: "Inauguração na Av. Itaberaba",
+      subtitle: "Ampliando o Acesso à Odontologia de Qualidade",
+      description: "Acontece a abertura da clínica na Avenida Itaberaba, expandindo o atendimento humanizado e os tratamentos acessíveis da Sorriso Reality para mais paulistanos.",
+      location: "Avenida Itaberaba, São Paulo",
+    },
+    {
+      year: "2020",
+      exactDate: "Ano de 2020",
+      title: "Marco dos 400 m² no Térreo da Rua 12 de Outubro",
+      subtitle: "Unidade Principal nº 651",
+      description: "Inauguração da unidade na Rua 12 de Outubro, nº 651, no coração da Lapa. Um marco histórico como a primeira clínica no térreo de toda a Rua 12 de Outubro, oferecendo mais de 400 m² de acessibilidade plena para todas as idades.",
+      location: "Rua 12 de Outubro, 651 - Lapa",
+    },
+    {
+      year: "2025",
+      exactDate: "10 de Julho de 2025",
+      title: "Bodas de Prata: 25 Anos de História",
+      subtitle: "Mais de 50 mil clientes atendidos",
+      description: "A Sorriso Reality comemora 25 anos de atividades ininterruptas. Mais de 50.000 clientes atendidos com empenho, dedicação, preço justo e qualidade em clínica geral, próteses, ortodontia, implantes e harmonização facial, com profissionais parceiros em todas as áreas.",
+      location: "Lapa, São Paulo",
+    }
   ]
 };
 
@@ -86,7 +231,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: "clareamento-estetica",
     title: "Estética & Clareamento Dental",
     shortDesc: "Clareamento a laser e caseiro para dentes brancos e luminosos, facetas e lentes de resina.",
-    fullDesc: "Recupere o brilho natural dos seus dentes de forma segura, rápida e sem sensibilidade excessiva. Oferecemos opções de clareamento no consultório a laser ou moldeiras personalizadas para uso em casa, com acompanhamento do Dr. José Ricardo Guerra.",
+    fullDesc: "Recupere o brilho natural dos seus dentes de forma segura, rápida e sem sensibilidade excessiva. Oferecemos opções de clareamento no consultório a laser ou moldeiras personalizadas para uso em casa, com acompanhamento próximo da nossa equipe especializada.",
     benefits: [
       "Dentes visivelmente até 4 a 6 tons mais claros",
       "Protocolo seguro que preserva o esmalte dentário",
@@ -185,7 +330,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80",
     rating: 5,
     treatment: "Clareamento & Restaurações",
-    comment: "Fui por indicação de uma amiga que trabalha na Doze de Outubro. O diferencial de não precisar agendar e a avaliação ser 100% gratuita me surpreendeu! O clareamento deixou meus dentes brancos sem aquela sensibilidade horrível. Recomendo de olhos fechados!",
+    comment: "Fui por indicação de uma amiga. Fui atendida pelo Dr. José Henrique Guerra e o cuidado dele foi exemplar! O clareamento deixou meus dentes brancos sem nenhuma sensibilidade. O diferencial de não precisar agendar e a avaliação ser 100% gratuita me surpreendeu. Recomendo de olhos fechados!",
     neighborhood: "Vila Leopoldina, SP",
     date: "Há 1 mês"
   },
@@ -195,7 +340,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
     rating: 5,
     treatment: "Urgência & Tratamento de Canal",
-    comment: "Acordei com uma dor de dente insuportável no sábado de manhã. Cheguei na Sorriso Reality por volta das 10h sem agendamento e fui atendido imediatamente. O Dr. José Ricardo aliviou minha dor na mesma hora. Profissional ético e muito competente!",
+    comment: "Acordei com uma dor de dente insuportável no sábado de manhã. Cheguei na Sorriso Reality por volta das 10h sem agendamento e fui atendido imediatamente. O Dr. José Ricardo aliviou minha dor na mesma hora. Profissionais éticos, acolhedores e muito competentes!",
     neighborhood: "Água Branca, SP",
     date: "Há 3 semanas"
   },
@@ -205,7 +350,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80",
     rating: 5,
     treatment: "Ortodontia & Alinhador",
-    comment: "O atendimento da recepção até a cadeira do dentista é nota 10. A localização é perfeita, bem pertinho do Shopping Lapa e das lojas. O preço é justo e as condições de pagamento facilitaram muito o início do meu tratamento.",
+    comment: "O atendimento da recepção até a cadeira com os dentistas da Sorriso Reality é nota 10. A localização é perfeita na Doze de Outubro, bem pertinho do Shopping Lapa. O preço é justo e as condições de pagamento facilitaram muito o início do meu tratamento.",
     neighborhood: "Pompéia, SP",
     date: "Há 2 meses"
   }
@@ -219,7 +364,7 @@ export const FAQ_DATA: FaqItem[] = [
   },
   {
     question: "A avaliação inicial é realmente 100% gratuita?",
-    answer: "Sim, sem pegadinhas ou cobranças ocultas. O Dr. José Ricardo Guerra fará o exame clínico detalhado da sua saúde bucal, diagnosticará eventuais necessidades e apresentará o plano de tratamento completo sem qualquer custo ou obrigação.",
+    answer: "Sim, sem pegadinhas ou cobranças ocultas. Nossa equipe de dentistas fará o exame clínico detalhado da sua saúde bucal, diagnosticará eventuais necessidades e apresentará o plano de tratamento completo sem qualquer custo ou obrigação.",
     category: "atendimento"
   },
   {

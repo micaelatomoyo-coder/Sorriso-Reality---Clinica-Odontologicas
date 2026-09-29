@@ -20,7 +20,7 @@ interface ServiceModalProps {
 export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose, onBook }) => {
   const directWhatsappUrl = service
     ? `https://wa.me/${CLINIC_INFO.phoneRaw}?text=${encodeURIComponent(
-        `Olá, Dr. José Ricardo Guerra! Gostaria de saber mais sobre o tratamento de *${service.title}* na Sorriso Reality Lapa.`
+        `Olá, equipe Sorriso Reality! Gostaria de saber mais sobre o tratamento de *${service.title}* na clínica na Lapa.`
       )}`
     : '#';
 
@@ -114,7 +114,7 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose, on
 
               {/* Clinica notice */}
               <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500">
-                📍 Realizado na <strong>Sorriso Reality</strong> — Rua Doze de Outubro, 651 (Lapa). Atendimento pelo Dr. José Ricardo Guerra.
+                📍 Realizado na <strong>Sorriso Reality</strong> — Rua Doze de Outubro, 651 (Lapa). Atendimento pelo nosso corpo clínico especializado.
               </div>
             </div>
 

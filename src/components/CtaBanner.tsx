@@ -34,7 +34,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenBookingModal }) => {
               Pronto para Transformar Seu Sorriso?
             </h2>
             <p className="mt-2 text-sm sm:text-base text-emerald-100/90 font-normal max-w-xl">
-              Dê o primeiro passo hoje mesmo com uma <strong className="text-white font-semibold">Avaliação 100% Gratuita</strong> com o Dr. José Ricardo Guerra na Rua Doze de Outubro, 651.
+              Dê o primeiro passo hoje mesmo com uma <strong className="text-white font-semibold">Avaliação 100% Gratuita</strong> na Sorriso Reality na Rua Doze de Outubro, 651.
             </p>
           </div>
 

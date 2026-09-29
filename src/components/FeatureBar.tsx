@@ -22,8 +22,8 @@ export const FeatureBar: React.FC = () => {
     },
     {
       icon: UserCheck,
-      title: "Dr. José Ricardo Guerra",
-      desc: "Cirurgião dentista com mais de 12 anos de experiência e foco em odontologia humanizada.",
+      title: "25 Anos de Dedicação",
+      desc: "Bodas de Prata: Dr. Ricardo, Dr. Henrique e equipe de dentistas especialistas na Lapa.",
     },
     {
       icon: Smile,

@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo1.jpeg';
 
 interface LogoProps {
   className?: string;
@@ -13,28 +14,40 @@ export const Logo: React.FC<LogoProps> = ({
   size = 'md',
 }) => {
   const isWhite = variant === 'white';
-  // Use the exact uploaded logosr1.png (or transparent logosr2.png on dark backgrounds)
-  const imgSrc = isWhite ? '/logosr2.png' : '/logosr1.png';
 
   // Generous height classes for bold, unmistakable brand presence
   const heightClasses = {
     sm: 'h-10 sm:h-12',
-    md: 'h-14 sm:h-16 md:h-18 lg:h-20',
-    lg: 'h-18 sm:h-22 md:h-24',
-    xl: 'h-24 sm:h-28 md:h-32',
-    '2xl': 'h-32 sm:h-36 md:h-40',
+    md: 'h-12 sm:h-14 md:h-16 lg:h-18',
+    lg: 'h-14 sm:h-16 md:h-18',
+    xl: 'h-20 sm:h-24 md:h-28',
+    '2xl': 'h-28 sm:h-32 md:h-36',
   }[size];
+
+  if (isWhite) {
+    return (
+      <div className={`inline-flex items-center select-none ${className}`}>
+        <div className="bg-white/95 px-3.5 py-1.5 rounded-xl shadow-xs inline-flex items-center transition-transform duration-300 hover:scale-[1.02]">
+          <img
+            src={logoImg}
+            alt="Sorriso Reality Clínicas Odontológicas"
+            className={`${heightClasses} w-auto max-w-[240px] sm:max-w-[280px] object-contain`}
+            loading="eager"
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <img
-        src={imgSrc}
+        src={logoImg}
         alt="Sorriso Reality Clínicas Odontológicas"
-        className={`${heightClasses} w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] object-contain transition-transform duration-300 hover:scale-102 ${
-          isWhite ? 'brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]' : ''
-        }`}
+        className={`${heightClasses} w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] object-contain transition-transform duration-300 hover:scale-[1.02]`}
         loading="eager"
       />
     </div>
   );
 };
+

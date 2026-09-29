@@ -67,7 +67,7 @@ export const LocationSection: React.FC = () => {
                 {CLINIC_INFO.fullName}
               </h3>
               <p className="text-xs text-[#008744] font-bold uppercase tracking-wider mb-3">
-                Dr. José Ricardo Guerra • Cirurgião Dentista
+                25 Anos de Dedicação • Bodas de Prata (2000-2025)
               </p>
 
               <p className="text-base font-semibold text-slate-800 leading-snug">

@@ -14,9 +14,17 @@ import {
 
 interface NavbarProps {
   onOpenBookingModal: (serviceName?: string) => void;
+  currentPage?: 'home' | 'historia';
+  onNavigateHome?: () => void;
+  onNavigateHistory?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({ 
+  onOpenBookingModal,
+  currentPage = 'home',
+  onNavigateHome,
+  onNavigateHistory
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -28,16 +36,38 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Streamlined essential navigation links for an airy, uncluttered header
+  // Streamlined navigation links including 25 Anos history
   const navLinks = [
     { label: 'Tratamentos', href: '#tratamentos' },
     { label: 'Sobre', href: '#sobre' },
-    { label: 'Resultados', href: '#resultados' },
+    { label: 'História (25 Anos)', href: '#historia', isHistory: true },
+    { label: 'Instagram', href: '#instagram' },
     { label: 'Localização', href: '#localizacao' },
   ];
 
-  const handleLinkClick = (href: string) => {
+  const handleLinkClick = (href: string, isHistory?: boolean) => {
     setMobileMenuOpen(false);
+
+    if (isHistory) {
+      if (onNavigateHistory) {
+        onNavigateHistory();
+      } else {
+        window.location.hash = '#historia';
+      }
+      return;
+    }
+
+    if (currentPage === 'historia' && onNavigateHome) {
+      onNavigateHome();
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 50);
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -115,9 +145,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleLinkClick(link.href);
+                  handleLinkClick(link.href, link.isHistory);
                 }}
-                className="text-sm font-semibold text-slate-700 hover:text-[#008744] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#008744] hover:after:w-full after:transition-all after:duration-200"
+                className={`text-sm font-semibold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#008744] hover:after:w-full after:transition-all after:duration-200 ${
+                  link.isHistory && currentPage === 'historia'
+                    ? 'text-[#008744] after:w-full font-bold'
+                    : 'text-slate-700 hover:text-[#008744] after:w-0'
+                }`}
               >
                 {link.label}
               </a>
@@ -174,9 +208,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 href={link.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleLinkClick(link.href);
+                  handleLinkClick(link.href, link.isHistory);
                 }}
-                className="px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-800 hover:bg-emerald-50 hover:text-[#008744] transition-colors"
+                className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                  link.isHistory && currentPage === 'historia'
+                    ? 'bg-emerald-50 text-[#008744] font-bold'
+                    : 'text-slate-800 hover:bg-emerald-50 hover:text-[#008744]'
+                }`}
               >
                 {link.label}
               </a>

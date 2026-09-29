@@ -4,7 +4,6 @@ import { CLINIC_INFO } from '../data/clinicData';
 import { 
   ArrowRight, 
   MessageCircle, 
-  Star, 
   Sparkles, 
   CheckCircle2,
   ShieldCheck,
@@ -95,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               transition={{ duration: 0.6, delay: 0.16, ease: 'easeOut' }}
               className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal"
             >
-              Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, combinamos tecnologia moderna, acolhimento humano e conforto total. Atendimento direto com o <strong className="font-semibold text-slate-900">Dr. José Ricardo Guerra</strong> na Rua Doze de Outubro com avaliação inicial gratuita.
+              Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, celebramos 25 anos de dedicação (Bodas de Prata 2000-2025) com tecnologia moderna, preço justo e acolhimento humano. Equipe completa de cirurgiões dentistas na Rua Doze de Outubro com avaliação inicial gratuita.
             </motion.p>
 
             {/* Quick Benefits Bullet Badges */}
@@ -148,50 +147,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                 <span>Conversar no WhatsApp</span>
               </motion.a>
             </motion.div>
-
-            {/* Social Proof Cluster */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.38 }}
-              className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-200/80 w-full"
-            >
-              <div className="flex -space-x-2 overflow-hidden">
-                <img
-                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80"
-                  alt="Paciente Sorriso Reality"
-                />
-                <img
-                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80"
-                  alt="Paciente Sorriso Reality"
-                />
-                <img
-                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80"
-                  alt="Paciente Sorriso Reality"
-                />
-                <img
-                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=80&q=80"
-                  alt="Paciente Sorriso Reality"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                  <span className="ml-1 text-xs sm:text-sm font-bold text-slate-800">4.9 / 5.0</span>
-                </div>
-                <span className="text-[11px] sm:text-xs text-slate-500 font-medium">
-                  Mais de 380 pacientes satisfeitos no Google
-                </span>
-              </div>
-            </motion.div>
-
           </div>
 
           {/* Right Column: Discreet Doctor Badge positioned at bottom right */}
@@ -206,8 +161,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                 <ShieldCheck className="w-5 h-5 text-white" />
               </div>
               <div className="text-left">
-                <p className="text-xs font-bold text-slate-900">{CLINIC_INFO.dentist.name}</p>
-                <p className="text-[11px] text-slate-500">{CLINIC_INFO.dentist.title} • {CLINIC_INFO.dentist.cro}</p>
+                <p className="text-xs font-bold text-slate-900">Sorriso Reality Clínicas</p>
+                <p className="text-[11px] text-slate-500">25 Anos de Dedicação • Bodas de Prata</p>
                 <div className="flex items-center gap-1 text-[10px] text-emerald-700 font-semibold mt-0.5">
                   <MapPin className="w-3 h-3 text-[#008744]" />
                   <span>Rua Doze de Outubro, 651 - Lapa</span>

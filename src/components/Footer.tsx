@@ -8,14 +8,16 @@ import {
   MessageCircle, 
   ShieldCheck, 
   Heart,
-  ChevronRight
+  ChevronRight,
+  Instagram
 } from 'lucide-react';
 
 interface FooterProps {
   onOpenBookingModal: (serviceName?: string) => void;
+  onNavigateHistory?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHistory }) => {
   const scrollTo = (id: string) => {
     const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -33,13 +35,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
             <Logo variant="white" size="lg" />
             
             <p className="text-xs sm:text-sm text-emerald-100/70 leading-relaxed font-normal pt-2">
-              Clínica odontológica de referência na Lapa, São Paulo. Cuidado humanizado, avaliação gratuita e facilidade de atendimento sem agendamento prévio com o <strong>Dr. José Ricardo Guerra</strong>.
+              Clínica odontológica de referência na Lapa, São Paulo. 25 anos de história e dedicação (Bodas de Prata 2000-2025), cuidado humanizado, avaliação gratuita e equipe multidisciplinar de dentistas especializados.
             </p>
 
-            <div className="p-3.5 rounded-xl bg-emerald-950/80 border border-emerald-800/40 text-xs text-emerald-200/90">
-              <div className="font-semibold text-white">Dr. José Ricardo Guerra</div>
-              <div className="text-[11px] text-emerald-300">Cirurgião Dentista • CRO-SP 114.892</div>
-              <div className="text-[11px] text-emerald-400/80 mt-0.5">Responsável Técnico</div>
+            <div className="p-3 rounded-xl bg-emerald-950/80 border border-emerald-800/40 text-xs text-emerald-200/90 space-y-2">
+              <div>
+                <div className="font-semibold text-white">Dr. José Ricardo Guerra</div>
+                <div className="text-[11px] text-emerald-300">Cirurgião Dentista • CRO-SP 66.961</div>
+              </div>
+              <div className="pt-1.5 border-t border-emerald-900/60">
+                <div className="font-semibold text-white">Dr. José Henrique Guerra</div>
+                <div className="text-[11px] text-emerald-300">Cirurgião Dentista • CRO-SP 97.458</div>
+              </div>
             </div>
           </div>
 
@@ -62,7 +69,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
                   onClick={() => scrollTo('#sobre')}
                   className="hover:text-emerald-300 transition-colors cursor-pointer"
                 >
-                  Sobre o Doutor
+                  Sobre a Clínica
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigateHistory ? onNavigateHistory() : scrollTo('#sobre')}
+                  className="text-emerald-300 font-bold hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                >
+                  <span>História (25 Anos)</span>
+                  <span className="text-[10px] bg-emerald-700 text-white px-1.5 py-0.5 rounded font-bold">Bodas de Prata</span>
                 </button>
               </li>
               <li>
@@ -83,18 +99,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollTo('#resultados')}
-                  className="hover:text-emerald-300 transition-colors cursor-pointer"
-                >
-                  Antes & Depois
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollTo('#depoimentos')}
                   className="hover:text-emerald-300 transition-colors cursor-pointer"
                 >
                   Depoimentos
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollTo('#instagram')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer"
+                >
+                  Instagram
                 </button>
               </li>
               <li>
@@ -153,12 +169,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
 
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a
-                  href={`tel:${CLINIC_INFO.phoneRaw}`}
-                  className="hover:text-white font-semibold"
-                >
-                  {CLINIC_INFO.phone}
-                </a>
+                <div className="flex flex-col text-xs">
+                  <a
+                    href={`tel:${CLINIC_INFO.phoneRaw}`}
+                    className="hover:text-white font-semibold"
+                  >
+                    WhatsApp: {CLINIC_INFO.phone}
+                  </a>
+                  <a
+                    href="tel:551126671294"
+                    className="hover:text-white text-emerald-200/80"
+                  >
+                    Fixo: (11) 2667-1294
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-start gap-2.5">
@@ -170,7 +194,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 flex flex-col gap-2">
                 <a
                   href={CLINIC_INFO.whatsappUrl}
                   target="_blank"
@@ -179,6 +203,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>WhatsApp: {CLINIC_INFO.phone}</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/clinicas.sorrisoreality"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-[#833ab4]/80 via-[#fd1d1d]/80 to-[#fcb045]/80 hover:opacity-100 text-white font-bold text-xs transition-opacity"
+                >
+                  <Instagram className="w-4 h-4" />
+                  <span>Instagram: @clinicas.sorrisoreality</span>
                 </a>
               </div>
             </div>
@@ -193,7 +227,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal }) => {
           </p>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Dr. José Ricardo Guerra - Cirurgião Dentista</span>
+            <span>Corpo Clínico Especializado • 25 Anos de Dedicação (2000 - 2025)</span>
           </div>
         </div>
 

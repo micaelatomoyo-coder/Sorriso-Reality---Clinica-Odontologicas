@@ -19,7 +19,7 @@ export const WhatsAppFloatingButton: React.FC = () => {
           </button>
           <div className="font-bold text-[#006a38] mb-0.5">Dúvidas sobre seu tratamento?</div>
           <p className="text-slate-600 text-[11px] leading-tight">
-            Converse agora no WhatsApp com a equipe do Dr. José Ricardo Guerra!
+            Converse agora no WhatsApp com a equipe da Sorriso Reality!
           </p>
         </div>
       )}
