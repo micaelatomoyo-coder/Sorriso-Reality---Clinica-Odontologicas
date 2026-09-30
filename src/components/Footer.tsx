@@ -153,57 +153,62 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
           </div>
 
           {/* Col 4: Contact & Hours */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-white text-xs font-bold uppercase tracking-wider">
-              Atendimento na Lapa
+              Nossas Unidades
             </h4>
             
-            <div className="space-y-2.5 text-xs text-emerald-100/80">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>{CLINIC_INFO.address.street}</strong><br />
-                  {CLINIC_INFO.address.neighborhood} - {CLINIC_INFO.address.city}/{CLINIC_INFO.address.state}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <div className="flex flex-col text-xs">
-                  <a
-                    href={`tel:${CLINIC_INFO.phoneRaw}`}
-                    className="hover:text-white font-semibold"
-                  >
-                    Telefone / WhatsApp: {CLINIC_INFO.phone}
-                  </a>
+            <div className="space-y-3.5 text-xs text-emerald-100/80">
+              {/* Unidade 1 Lapa */}
+              <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-900/60 space-y-1.5">
+                <div className="font-bold text-white flex items-center gap-1 text-xs">
+                  <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Unidade 1 — Lapa</span>
                 </div>
+                <p className="text-[11px] text-emerald-200/90 leading-tight">
+                  Rua Doze de Outubro, 651 - Lapa, SP
+                </p>
+                <a
+                  href={`tel:${CLINIC_INFO.phoneRaw}`}
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300 hover:text-white"
+                >
+                  <Phone className="w-3 h-3" />
+                  <span>Tel / WhatsApp: (11) 97101-2603</span>
+                </a>
               </div>
 
-              <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+              {/* Unidade 2 Freguesia do Ó */}
+              <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-900/60 space-y-1.5">
+                <div className="font-bold text-white flex items-center gap-1 text-xs">
+                  <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>Unidade 2 — Freguesia do Ó</span>
+                </div>
+                <p className="text-[11px] text-emerald-200/90 leading-tight">
+                  Av. Itaberaba, 2067 - Freguesia do Ó, SP
+                </p>
+                <a
+                  href="tel:551143060023"
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300 hover:text-white"
+                >
+                  <Phone className="w-3 h-3" />
+                  <span>Tel / WhatsApp: (11) 4306-0023</span>
+                </a>
+              </div>
+
+              <div className="flex items-start gap-2 pt-1 text-[11px] text-emerald-200/80">
+                <Clock className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <p><strong>Segunda a Sexta:</strong> 09h às 18h</p>
-                  <p><strong>Sábado:</strong> 09h às 13h</p>
-                  <p className="text-emerald-400/70 text-[11px]">Sem necessidade de agendar</p>
+                  <p><strong>Seg a Sex:</strong> 09h às 18h | <strong>Sáb:</strong> 09h às 13h</p>
+                  <p className="text-emerald-400/80">Atendimento sem agendamento prévio</p>
                 </div>
               </div>
 
               <div className="pt-2 flex flex-col gap-2">
                 <a
-                  href={CLINIC_INFO.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#008744] hover:bg-[#007038] text-white font-bold text-xs transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp: {CLINIC_INFO.phone}</span>
-                </a>
-
-                <a
                   href="https://www.instagram.com/clinicas.sorrisoreality"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-[#833ab4]/80 via-[#fd1d1d]/80 to-[#fcb045]/80 hover:opacity-100 text-white font-bold text-xs transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-[#833ab4]/80 via-[#fd1d1d]/80 to-[#fcb045]/80 hover:opacity-100 text-white font-bold text-xs transition-opacity"
                 >
                   <Instagram className="w-4 h-4" />
                   <span>Instagram: @clinicas.sorrisoreality</span>

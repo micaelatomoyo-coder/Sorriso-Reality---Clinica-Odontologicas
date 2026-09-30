@@ -36,6 +36,118 @@ export interface DentistMember {
   image: string;
 }
 
+export interface ClinicUnit {
+  id: 'lapa' | 'freguesia';
+  name: string;
+  shortName: string;
+  neighborhood: string;
+  tag: string;
+  isMain?: boolean;
+  phone: string;
+  phoneRaw: string;
+  phoneFormatted: string;
+  whatsappUrl: string;
+  address: {
+    street: string;
+    neighborhood: string;
+    city: string;
+    state: string;
+    cep: string;
+    reference: string;
+    googleMapsUrl: string;
+    wazeUrl: string;
+    mapEmbedUrl: string;
+  };
+  transport: {
+    trainOrMetro?: string;
+    bus: string;
+    reference: string;
+  };
+  hours: { days: string; hours: string; isClosed?: boolean }[];
+  features: string[];
+}
+
+export const CLINIC_UNITS: ClinicUnit[] = [
+  {
+    id: 'lapa',
+    name: 'Unidade 1 — Lapa (Sede Principal)',
+    shortName: 'Unidade Lapa',
+    neighborhood: 'Lapa',
+    tag: 'Sede Própria • Térreo',
+    isMain: true,
+    phone: '(11) 97101-2603',
+    phoneRaw: '5511971012603',
+    phoneFormatted: '(11) 97101-2603',
+    whatsappUrl: 'https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Lapa!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.',
+    address: {
+      street: 'Rua Doze de Outubro, 651',
+      neighborhood: 'Lapa',
+      city: 'São Paulo',
+      state: 'SP',
+      cep: '05073-001',
+      reference: 'No centro comercial da Lapa, próximo ao Shopping Lapa e à estação CPTM',
+      googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rua+Doze+de+Outubro+651+Lapa+Sao+Paulo',
+      wazeUrl: 'https://waze.com/ul?q=Rua%20Doze%20de%20Outubro%20651%20Lapa%20Sao%20Paulo',
+      mapEmbedUrl: 'https://maps.google.com/maps?q=Rua%20Doze%20de%20Outubro,%20651%20Lapa%20Sao%20Paulo&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    },
+    transport: {
+      trainOrMetro: 'Apenas 4 minutos a pé das estações Lapa da CPTM (Linhas 7 e 8).',
+      bus: 'Dezenas de linhas de ônibus passam em frente e na Rua Doze de Outubro.',
+      reference: 'Em frente ao comércio central, bem próximo ao Shopping Center Lapa e Mercado da Lapa.'
+    },
+    hours: [
+      { days: 'Segunda a Sexta-feira', hours: '09h às 18h' },
+      { days: 'Sábado', hours: '09h às 13h' },
+      { days: 'Domingos e Feriados', hours: 'Fechado (Plantão WhatsApp)', isClosed: true }
+    ],
+    features: [
+      'Mais de 400 m² no piso térreo',
+      'Acessibilidade total para idosos e carrinhos',
+      'Atendimento com ou sem hora marcada',
+      'Avaliação inicial 100% gratuita'
+    ]
+  },
+  {
+    id: 'freguesia',
+    name: 'Unidade 2 — Freguesia do Ó',
+    shortName: 'Unidade Freguesia do Ó',
+    neighborhood: 'Freguesia do Ó',
+    tag: 'Av. Itaberaba • Desde 2010',
+    isMain: false,
+    phone: '(11) 4306-0023',
+    phoneRaw: '551143060023',
+    phoneFormatted: '(11) 4306-0023',
+    whatsappUrl: 'https://wa.me/551143060023?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.',
+    address: {
+      street: 'Av. Itaberaba, 2067',
+      neighborhood: 'Freguesia do Ó',
+      city: 'São Paulo',
+      state: 'SP',
+      cep: '02734-000',
+      reference: 'Na principal avenida da Freguesia do Ó, com fácil acesso e comércio ativo',
+      googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Av+Itaberaba+2067+Freguesia+do+O+Sao+Paulo',
+      wazeUrl: 'https://waze.com/ul?q=Av%20Itaberaba%202067%20Freguesia%20do%20O%20Sao%20Paulo',
+      mapEmbedUrl: 'https://maps.google.com/maps?q=Av.%20Itaberaba,%202067%20Freguesia%20do%20O%20Sao%20Paulo&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    },
+    transport: {
+      trainOrMetro: 'Fácil integração com transporte público da Zona Norte e Marginal Tietê.',
+      bus: 'Diversas linhas de ônibus com ponto em frente ou na mesma quadra da Av. Itaberaba.',
+      reference: 'Ponto comercial consolidado na Av. Itaberaba, com facilidade para paradas rápidas e comércio local.'
+    },
+    hours: [
+      { days: 'Segunda a Sexta-feira', hours: '09h às 18h' },
+      { days: 'Sábado', hours: '09h às 13h' },
+      { days: 'Domingos e Feriados', hours: 'Fechado (Plantão WhatsApp)', isClosed: true }
+    ],
+    features: [
+      'Localização privilegiada na Av. Itaberaba',
+      'Corpo clínico completo e equipamentos modernos',
+      'Atendimento por ordem de chegada ou agendado',
+      'Avaliação 100% gratuita'
+    ]
+  }
+];
+
 export const CLINIC_INFO = {
   name: "Sorriso Reality",
   fullName: "Sorriso Reality Clínicas Odontológicas",
@@ -43,6 +155,7 @@ export const CLINIC_INFO = {
   motto: "Preço justo e qualidade!",
   experienceYears: 25,
   dentistsPhoto: "/images/fotodentistas.png",
+  units: CLINIC_UNITS,
   dentists: [
     {
       name: "Dr. José Ricardo Guerra",
@@ -70,7 +183,10 @@ export const CLINIC_INFO = {
   },
   phone: "(11) 97101-2603",
   phoneRaw: "5511971012603",
-  whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality%20Lapa.",
+  phoneSecondary: "(11) 4306-0023",
+  phoneSecondaryRaw: "551143060023",
+  whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality.",
+  whatsappUrlFreguesia: "https://wa.me/551143060023?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.",
   instagramHandle: "@clinicas.sorrisoreality",
   instagramUrl: "https://www.instagram.com/clinicas.sorrisoreality",
   facebookPage: "Clínicas Sorriso Reality",
@@ -83,6 +199,16 @@ export const CLINIC_INFO = {
     reference: "No centro comercial da Lapa, próximo ao Shopping Lapa e à estação de trem CPTM Lapa",
     googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Rua+Doze+de+Outubro+651+Lapa+Sao+Paulo",
     wazeUrl: "https://waze.com/ul?q=Rua%20Doze%20de%20Outubro%20651%20Lapa%20Sao%20Paulo",
+  },
+  addressUnit2: {
+    street: "Av. Itaberaba, 2067",
+    neighborhood: "Freguesia do Ó",
+    city: "São Paulo",
+    state: "SP",
+    cep: "02734-000",
+    reference: "Na principal avenida da Freguesia do Ó, fácil acesso",
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Av+Itaberaba+2067+Freguesia+do+O+Sao+Paulo",
+    wazeUrl: "https://waze.com/ul?q=Av%20Itaberaba%202067%20Freguesia%20do%20O%20Sao%20Paulo",
   },
   hours: [
     { days: "Segunda a Sexta", hours: "09h às 18h", openTime: 9, closeTime: 18, isWeekday: true },

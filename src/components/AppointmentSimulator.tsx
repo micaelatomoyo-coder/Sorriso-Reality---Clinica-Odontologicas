@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CLINIC_INFO } from '../data/clinicData';
+import { CLINIC_INFO, CLINIC_UNITS, ClinicUnit } from '../data/clinicData';
 import { 
   Calendar, 
   Clock, 
@@ -10,7 +10,8 @@ import {
   CheckCircle2, 
   MapPin, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Building
 } from 'lucide-react';
 
 interface AppointmentSimulatorProps {
@@ -24,6 +25,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
   onClose,
   isModal = false,
 }) => {
+  const [selectedUnitId, setSelectedUnitId] = useState<'lapa' | 'freguesia'>('lapa');
   const [selectedService, setSelectedService] = useState(initialService);
   const [selectedPeriod, setSelectedPeriod] = useState('Manhã (09h às 13h)');
   const [selectedDayType, setSelectedDayType] = useState('Durante a Semana (Seg-Sex)');
@@ -31,6 +33,8 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
   const [patientPhone, setPatientPhone] = useState('');
   const [notes, setNotes] = useState('');
   const [mode, setMode] = useState<'appointment' | 'walkin'>('appointment');
+
+  const activeUnit = CLINIC_UNITS.find(u => u.id === selectedUnitId) || CLINIC_UNITS[0];
 
   const availableServices = [
     'Avaliação Gratuita Inicial',
@@ -47,9 +51,10 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
 
     let text = '';
     if (mode === 'walkin') {
-      text = `Olá, equipe Sorriso Reality! Meu nome é *${patientName.trim() || 'Paciente'}*. Estou a caminho da clínica na Rua Doze de Outubro, 651 para atendimento sem agendamento (urgência/avaliação).`;
+      text = `Olá, equipe Sorriso Reality (${activeUnit.shortName})! Meu nome é *${patientName.trim() || 'Paciente'}*. Estou a caminho da unidade *${activeUnit.address.street} (${activeUnit.neighborhood})* para atendimento sem agendamento (urgência/avaliação).`;
     } else {
-      text = `Olá, equipe da Sorriso Reality Lapa! Gostaria de agendar minha *Avaliação Gratuita*:\n\n` +
+      text = `Olá, equipe da Sorriso Reality (*${activeUnit.name}*)! Gostaria de agendar minha *Avaliação Gratuita*:\n\n` +
+        `📍 *Unidade Desejada:* ${activeUnit.name} (${activeUnit.address.street})\n` +
         `👤 *Nome:* ${patientName.trim() || 'Não informado'}\n` +
         `📱 *Telefone:* ${patientPhone.trim() || 'Não informado'}\n` +
         `🦷 *Tratamento de interesse:* ${selectedService}\n` +
@@ -58,7 +63,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
         `Aguardo a confirmação da equipe. Muito obrigado!`;
     }
 
-    const url = `https://wa.me/${CLINIC_INFO.phoneRaw}?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/${activeUnit.phoneRaw}?text=${encodeURIComponent(text)}`;
     try {
       const link = document.createElement('a');
       link.href = url;
@@ -88,13 +93,13 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
           <div className="bg-[#005a2b] text-white p-6 sm:p-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-700/60 text-emerald-200 text-xs font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Agendamento Rápido & Sem Complicações</span>
+              <span>Agendamento Rápido &amp; Sem Complicações</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
               Agende sua Avaliação Gratuita
             </h3>
             <p className="text-sm sm:text-base text-emerald-100/90 mt-1 font-normal">
-              Escolha o melhor dia ou saiba como comparecer hoje mesmo sem hora marcada na Rua Doze de Outubro, 651 - Lapa.
+              Escolha a unidade mais próxima (Lapa ou Freguesia do Ó) e agende seu horário ou compareça sem hora marcada.
             </p>
 
             {/* Mode Switcher */}
@@ -126,6 +131,48 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
 
           {/* Body */}
           <div className="p-6 sm:p-8">
+            
+            {/* Unit Selection Header */}
+            <div className="mb-6">
+              <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                Selecione a Unidade Desejada:
+              </label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {CLINIC_UNITS.map((u) => {
+                  const isSelected = selectedUnitId === u.id;
+                  return (
+                    <button
+                      key={u.id}
+                      type="button"
+                      onClick={() => setSelectedUnitId(u.id)}
+                      className={`p-3.5 rounded-2xl text-left transition-all border-2 cursor-pointer flex items-start justify-between ${
+                        isSelected
+                          ? 'bg-emerald-50/80 border-[#008744] shadow-xs'
+                          : 'bg-white border-slate-200 hover:border-emerald-200'
+                      }`}
+                    >
+                      <div>
+                        <div className="flex items-center gap-1.5 font-extrabold text-xs sm:text-sm text-slate-900">
+                          <MapPin className={`w-4 h-4 ${isSelected ? 'text-[#008744]' : 'text-slate-400'}`} />
+                          <span>{u.name}</span>
+                        </div>
+                        <p className="text-xs text-slate-600 mt-1 font-medium">
+                          {u.address.street}
+                        </p>
+                        <p className="text-[11px] text-[#008744] font-bold mt-0.5">
+                          Tel / WhatsApp: {u.phone}
+                        </p>
+                      </div>
+
+                      {isSelected && (
+                        <CheckCircle2 className="w-5 h-5 text-[#008744] shrink-0 mt-0.5 ml-2" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
             <AnimatePresence mode="wait">
               {mode === 'walkin' ? (
                 /* Walk-in Notice Info */
@@ -140,10 +187,10 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                   <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 space-y-3">
                     <div className="flex items-center gap-2 text-[#008744] font-bold text-base">
                       <CheckCircle2 className="w-5 h-5" />
-                      <span>É só chegar e ser bem-vindo!</span>
+                      <span>É só chegar e ser bem-vindo na {activeUnit.shortName}!</span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                      Na <strong>Sorriso Reality</strong>, você não precisa ficar esperando semanas por uma consulta. Você pode comparecer diretamente à clínica dentro do horário comercial e será atendido por ordem de chegada com todo cuidado por nossa equipe de dentistas especializados.
+                      Na <strong>Sorriso Reality</strong>, você não precisa ficar esperando semanas por uma consulta. Você pode comparecer diretamente à <strong>{activeUnit.name}</strong> dentro do horário de funcionamento e será atendido por ordem de chegada com todo cuidado por nossa equipe de dentistas especializados.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2">
                       <div className="p-3 bg-white rounded-xl border border-emerald-100">
@@ -160,15 +207,16 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3 text-xs sm:text-sm text-slate-700">
                     <MapPin className="w-5 h-5 text-[#008744] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="block text-slate-900">{CLINIC_INFO.address.street} - Lapa, São Paulo - SP</strong>
-                      <span className="text-slate-500">Próximo ao Shopping Lapa e à estação de trem da CPTM.</span>
+                      <strong className="block text-slate-900">{activeUnit.name}</strong>
+                      <span className="text-slate-600 font-medium">{activeUnit.address.street} — {activeUnit.address.neighborhood}, {activeUnit.address.city}/{activeUnit.address.state}</span>
+                      <p className="text-xs text-slate-500 mt-0.5">{activeUnit.address.reference}</p>
                     </div>
                   </div>
 
                   <form onSubmit={handleSendWhatsapp} className="space-y-4">
                     <div>
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Seu Nome (Opcional - para avisar a recepção)
+                        Seu Nome (Opcional - para avisar a recepção da {activeUnit.shortName})
                       </label>
                       <input
                         type="text"
@@ -187,17 +235,17 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                         className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-white bg-[#008744] hover:bg-[#007038] shadow-md transition-colors cursor-pointer text-sm"
                       >
                         <MessageCircle className="w-4 h-4" />
-                        Avisar no WhatsApp que Estou a Caminho
+                        Avisar no WhatsApp da {activeUnit.shortName}
                       </motion.button>
 
                       <a
-                        href={CLINIC_INFO.address.googleMapsUrl}
+                        href={activeUnit.address.googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 text-sm transition-colors text-center"
                       >
                         <MapPin className="w-4 h-4 text-slate-500" />
-                        Ver Rota no GPS
+                        Ver Rota ({activeUnit.shortName})
                       </a>
                     </div>
                   </form>
@@ -317,7 +365,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                     </label>
                     <input
                       type="text"
-                      placeholder="Ex: Estou com sensibilidade nos dentes de baixo ou gostaria de clarear"
+                      placeholder="Ex: Gostaria de fazer uma avaliação para implante ou clareamento"
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
                       className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#008744]"
@@ -328,7 +376,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                   <div className="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-100 flex items-center gap-2.5 text-xs text-emerald-900">
                     <Sparkles className="w-4 h-4 text-[#008744] shrink-0" />
                     <span>
-                      <strong>Avaliação 100% Gratuita garantida:</strong> Você receberá o atendimento com exame clínico e planejamento sem nenhum custo na recepção.
+                      <strong>Avaliação 100% Gratuita na {activeUnit.shortName}:</strong> Você receberá o atendimento com exame clínico e planejamento sem nenhum custo na recepção.
                     </span>
                   </div>
 
@@ -341,7 +389,7 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                       className="w-full flex items-center justify-center gap-2.5 py-4 px-6 rounded-xl font-bold text-white bg-[#008744] hover:bg-[#007038] active:bg-[#005a2b] shadow-lg shadow-emerald-700/20 text-sm transition-all cursor-pointer text-center"
                     >
                       <MessageCircle className="w-5 h-5" />
-                      <span>Confirmar Agendamento no WhatsApp</span>
+                      <span>Agendar no WhatsApp da {activeUnit.shortName}</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
                   </div>
