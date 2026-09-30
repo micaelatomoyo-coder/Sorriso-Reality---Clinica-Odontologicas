@@ -175,27 +175,47 @@ export const LocationSection: React.FC = () => {
                 </button>
 
                 {/* Direct Contact Button */}
-                <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 mb-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-                  <div className="flex items-center gap-3 text-left w-full sm:w-auto">
-                    <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5" />
+                <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 mb-5 space-y-3">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 text-left">
+                      <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center shrink-0">
+                        <MessageCircle className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block">
+                          WhatsApp Oficial ({activeUnit.shortName}):
+                        </span>
+                        <strong className="text-sm font-extrabold text-slate-900">
+                          {activeUnit.phone}
+                        </strong>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block">
-                        Telefone &amp; WhatsApp:
-                      </span>
-                      <strong className="text-sm font-extrabold text-slate-900">
-                        {activeUnit.phone}
-                      </strong>
-                    </div>
+
+                    <a
+                      href={activeUnit.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] shadow-xs transition-colors shrink-0"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      <span>Falar no WhatsApp</span>
+                    </a>
                   </div>
 
-                  <a
-                    href={`tel:${activeUnit.phoneRaw}`}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] shadow-xs transition-colors shrink-0"
-                  >
-                    <span>Ligar Agora</span>
-                  </a>
+                  {activeUnit.landline && (
+                    <div className="pt-2.5 border-t border-emerald-200/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
+                      <div className="flex items-center gap-2 text-slate-700">
+                        <Phone className="w-4 h-4 text-emerald-700 shrink-0" />
+                        <span><strong>Telefone Fixo:</strong> {activeUnit.landline}</span>
+                      </div>
+                      <a
+                        href={`tel:${activeUnit.landlineRaw || '551143060023'}`}
+                        className="text-xs font-bold text-[#008744] hover:underline"
+                      >
+                        Ligar no Fixo
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 {/* Hours Block */}

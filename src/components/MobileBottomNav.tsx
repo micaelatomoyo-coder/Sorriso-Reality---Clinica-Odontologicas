@@ -184,14 +184,27 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenBookingM
                     )}
 
                     {activeSheet === 'call' && (
-                      <a
-                        href={`tel:${unit.phoneRaw}`}
-                        onClick={closeSheet}
-                        className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-[#008744] active:bg-[#005a2b] transition-colors"
-                      >
-                        <Phone className="w-4 h-4" />
-                        <span>Ligar para {unit.shortName} ({unit.phone})</span>
-                      </a>
+                      <div className="space-y-2">
+                        <a
+                          href={`tel:${unit.phoneRaw}`}
+                          onClick={closeSheet}
+                          className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-[#008744] active:bg-[#005a2b] transition-colors"
+                        >
+                          <Phone className="w-4 h-4" />
+                          <span>Ligar: {unit.phone} (WhatsApp/Cel)</span>
+                        </a>
+
+                        {unit.landline && (
+                          <a
+                            href={`tel:${unit.landlineRaw || '551143060023'}`}
+                            onClick={closeSheet}
+                            className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl text-xs font-semibold text-slate-700 bg-white border border-slate-300 active:bg-slate-100 transition-colors"
+                          >
+                            <Phone className="w-3.5 h-3.5 text-emerald-700" />
+                            <span>Ligar no Fixo: {unit.landline}</span>
+                          </a>
+                        )}
+                      </div>
                     )}
 
                     {activeSheet === 'whatsapp' && (

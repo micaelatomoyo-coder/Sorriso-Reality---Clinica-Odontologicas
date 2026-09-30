@@ -186,13 +186,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
                 <p className="text-[11px] text-emerald-200/90 leading-tight">
                   Av. Itaberaba, 2067 - Freguesia do Ó, SP
                 </p>
-                <a
-                  href="tel:551143060023"
-                  className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300 hover:text-white"
-                >
-                  <Phone className="w-3 h-3" />
-                  <span>Tel / WhatsApp: (11) 4306-0023</span>
-                </a>
+                <div className="flex flex-col gap-0.5 text-[11px]">
+                  <a
+                    href="https://wa.me/5511952163542?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-bold text-emerald-300 hover:text-white"
+                  >
+                    <MessageCircle className="w-3 h-3" />
+                    <span>WhatsApp: (11) 95216-3542</span>
+                  </a>
+                  <a
+                    href="tel:551143060023"
+                    className="inline-flex items-center gap-1 text-emerald-200/80 hover:text-white"
+                  >
+                    <Phone className="w-3 h-3" />
+                    <span>Fixo: (11) 4306-0023</span>
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-start gap-2 pt-1 text-[11px] text-emerald-200/80">

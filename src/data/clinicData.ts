@@ -46,6 +46,8 @@ export interface ClinicUnit {
   phone: string;
   phoneRaw: string;
   phoneFormatted: string;
+  landline?: string;
+  landlineRaw?: string;
   whatsappUrl: string;
   address: {
     street: string;
@@ -114,10 +116,12 @@ export const CLINIC_UNITS: ClinicUnit[] = [
     neighborhood: 'Freguesia do Ó',
     tag: 'Av. Itaberaba • Desde 2010',
     isMain: false,
-    phone: '(11) 4306-0023',
-    phoneRaw: '551143060023',
-    phoneFormatted: '(11) 4306-0023',
-    whatsappUrl: 'https://wa.me/551143060023?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.',
+    phone: '(11) 95216-3542',
+    phoneRaw: '5511952163542',
+    phoneFormatted: '(11) 95216-3542',
+    landline: '(11) 4306-0023',
+    landlineRaw: '551143060023',
+    whatsappUrl: 'https://wa.me/5511952163542?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.',
     address: {
       street: 'Av. Itaberaba, 2067',
       neighborhood: 'Freguesia do Ó',
@@ -183,10 +187,14 @@ export const CLINIC_INFO = {
   },
   phone: "(11) 97101-2603",
   phoneRaw: "5511971012603",
-  phoneSecondary: "(11) 4306-0023",
-  phoneSecondaryRaw: "551143060023",
+  phoneFreguesiaWhatsapp: "(11) 95216-3542",
+  phoneFreguesiaWhatsappRaw: "5511952163542",
+  phoneFreguesiaLandline: "(11) 4306-0023",
+  phoneFreguesiaLandlineRaw: "551143060023",
+  phoneSecondary: "(11) 95216-3542",
+  phoneSecondaryRaw: "5511952163542",
   whatsappUrl: "https://wa.me/5511971012603?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita%20na%20Sorriso%20Reality.",
-  whatsappUrlFreguesia: "https://wa.me/551143060023?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.",
+  whatsappUrlFreguesia: "https://wa.me/5511952163542?text=Ol%C3%A1%2C%20equipe%20Sorriso%20Reality%20Freguesia%20do%20%C3%93!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20e%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Gratuita.",
   instagramHandle: "@clinicas.sorrisoreality",
   instagramUrl: "https://www.instagram.com/clinicas.sorrisoreality",
   facebookPage: "Clínicas Sorriso Reality",
