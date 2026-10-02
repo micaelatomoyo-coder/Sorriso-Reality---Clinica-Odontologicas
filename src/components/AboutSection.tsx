@@ -85,10 +85,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
             Sobre a Sorriso Reality
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            25 Anos de Dedicação e Cuidado na Lapa — Bodas de Prata
+            26 Anos de Tradição e Cuidado em São Paulo
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            A <strong>Sorriso Reality Clínicas Odontológicas</strong>, fundada em 10 de julho de 2000, celebra 25 anos de atividades com os sócios dentistas <strong>Dr. José Ricardo Guerra</strong> e <strong>Dr. José Henrique Guerra</strong>, ao lado de uma equipe com vários profissionais especializados no centro da Lapa.
+            A <strong>Sorriso Reality Clínicas Odontológicas</strong>, fundada em 10 de julho de 2000, celebra 26 anos de atividades com os sócios dentistas <strong>Dr. José Ricardo Guerra</strong> e <strong>Dr. José Henrique Guerra</strong>, ao lado de uma equipe com vários profissionais especializados nas unidades Lapa e Freguesia do Ó.
           </p>
         </motion.div>
 
@@ -103,7 +103,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               Conheça os Dentistas da Sorriso Reality
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto mt-1">
-              Atendimento direto com os próprios fundadores e cirurgiões dentistas, com mais de 25 anos de experiência clínica na Lapa.
+              Atendimento direto com os próprios fundadores e cirurgiões dentistas, com mais de 26 anos de experiência clínica.
             </p>
           </div>
 
@@ -251,7 +251,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
             </h3>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-              Na <strong>Sorriso Reality</strong>, combinamos 25 anos de experiência e dedicação com atendimento humanizado, os irmãos fundadores Dr. Ricardo e Dr. Henrique e profissionais parceiros em todas as áreas odontológicas. Sempre com nossa marca: <em>preço justo e qualidade!</em>
+              Na <strong>Sorriso Reality</strong>, combinamos 26 anos de experiência e dedicação com atendimento humanizado, os irmãos fundadores Dr. Ricardo e Dr. Henrique e profissionais parceiros em todas as áreas odontológicas. Sempre com nossa marca: <em>preço justo e qualidade!</em>
             </p>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
@@ -279,9 +279,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               <div>
                 <div className="flex items-center gap-1 text-slate-900 font-extrabold text-lg sm:text-xl">
                   <Award className="w-4 h-4 text-[#008744]" />
-                  <span>25 Anos</span>
+                  <span>26 Anos</span>
                 </div>
-                <p className="text-[11px] text-slate-500 font-medium">Bodas de Prata (2000-2025)</p>
+                <p className="text-[11px] text-slate-500 font-medium">26 Anos de Tradição (2000-2026)</p>
               </div>
 
               <div>
@@ -319,7 +319,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                   <div>
                     <div className="flex items-center gap-2 mb-0.5">
                       <span className="text-xs font-bold text-[#006a38] uppercase tracking-wider">
-                        Bodas de Prata • 25 Anos (2000 - 2025)
+                        26 Anos de Tradição • 26 Anos (2000 - 2026)
                       </span>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-700 leading-snug">

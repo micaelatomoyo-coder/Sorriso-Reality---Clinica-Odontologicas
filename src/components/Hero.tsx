@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               transition={{ duration: 0.6, delay: 0.16, ease: 'easeOut' }}
               className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal"
             >
-              Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, celebramos 25 anos de dedicação (Bodas de Prata 2000-2025) com tecnologia moderna, preço justo e acolhimento humano. Equipe completa de cirurgiões dentistas na Rua Doze de Outubro com avaliação inicial gratuita.
+              Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, celebramos 26 anos de dedicação (2000-2026) com tecnologia moderna, preço justo e acolhimento humano. Equipe completa de cirurgiões dentistas nas unidades Lapa e Freguesia do Ó com avaliação inicial gratuita.
             </motion.p>
 
             {/* Quick Benefits Bullet Badges */}
@@ -162,7 +162,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               </div>
               <div className="text-left">
                 <p className="text-xs font-bold text-slate-900">Sorriso Reality Clínicas</p>
-                <p className="text-[11px] text-slate-500">25 Anos de Dedicação • Bodas de Prata</p>
+                <p className="text-[11px] text-slate-500">26 Anos de Tradição em SP</p>
                 <div className="flex items-center gap-1 text-[10px] text-emerald-700 font-semibold mt-0.5">
                   <MapPin className="w-3 h-3 text-[#008744]" />
                   <span>Rua Doze de Outubro, 651 - Lapa</span>

@@ -80,7 +80,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
             Soluções Completas para a Saúde do Seu Sorriso
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            Tratamentos modernos realizados com tecnologia de precisão, materiais de alta qualidade e atendimento humanizado na Lapa pela equipe de especialistas da <strong className="font-semibold text-slate-800">Sorriso Reality</strong>, com 25 anos de história e dedicação (Bodas de Prata).
+            Tratamentos modernos realizados com tecnologia de precisão, materiais de alta qualidade e atendimento humanizado pela equipe de especialistas da <strong className="font-semibold text-slate-800">Sorriso Reality</strong>, com 26 anos de história e dedicação.
           </p>
         </motion.div>
 

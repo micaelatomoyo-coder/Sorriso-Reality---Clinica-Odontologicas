@@ -67,7 +67,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
             </button>
 
             <button
-              onClick={() => onOpenBookingModal('Avaliação Gratuita - 25 Anos')}
+              onClick={() => onOpenBookingModal('Avaliação Gratuita - 26 Anos')}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] shadow-sm transition-all cursor-pointer"
             >
               <span>Agendar Avaliação</span>
@@ -84,27 +84,27 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
           {/* Eyebrow kicker */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#006030] text-xs font-bold uppercase tracking-wider mb-5">
             <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
-            <span>Matéria Especial de Aniversário • 2000 a 2025</span>
+            <span>Matéria Especial de Aniversário • 2000 a 2026</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.15] mb-5">
-            Sorriso Reality <span className="text-[#008744]">25 Anos</span>
+            Sorriso Reality <span className="text-[#008744]">26 Anos</span>
             <br className="hidden sm:inline" />
             <span className="text-2xl sm:text-3xl md:text-4xl font-normal text-slate-700 block sm:inline sm:ml-2">
-              — Do Sonho às Bodas de Prata
+              — Do Sonho às 26 Anos de Tradição
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Neste 10 de julho de 2025, a Sorriso Reality celebrou 25 anos de atividade ininterrupta na Lapa, liderada pelos irmãos e sócios dentistas <strong>Dr. José Ricardo Guerra</strong> e <strong>Dr. José Henrique Guerra</strong>. Uma trajetória que começou em 2000 e já transformou mais de 50 mil sorrisos com preço justo, qualidade e acolhimento humano.
+            Neste 10 de julho de 2026, a Sorriso Reality celebrou 26 anos de atividade ininterrupta na Lapa, liderada pelos irmãos e sócios dentistas <strong>Dr. José Ricardo Guerra</strong> e <strong>Dr. José Henrique Guerra</strong>. Uma trajetória que começou em 2000 e já transformou mais de 50 mil sorrisos com preço justo, qualidade e acolhimento humano.
           </p>
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto pt-2">
             <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs text-center">
-              <div className="text-2xl sm:text-3xl font-black text-[#008744]">25 Anos</div>
-              <div className="text-xs font-semibold text-slate-800 mt-0.5">Bodas de Prata</div>
-              <div className="text-[11px] text-slate-500">Julho 2000 a 2025</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#008744]">26 Anos</div>
+              <div className="text-xs font-semibold text-slate-800 mt-0.5">26 Anos de Tradição</div>
+              <div className="text-[11px] text-slate-500">Julho 2000 a 2026</div>
             </div>
 
             <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs text-center">
@@ -163,7 +163,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
               <div className="relative w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xs group">
                 <img
                   src="/images/fotodentistas.png"
-                  alt="Dr. José Ricardo Guerra e Dr. José Henrique Guerra - Sorriso Reality 25 anos"
+                  alt="Dr. José Ricardo Guerra e Dr. José Henrique Guerra - Sorriso Reality 26 anos"
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute top-2.5 left-2.5 bg-[#008744]/95 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs">
@@ -189,7 +189,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
             {/* Newspaper Text Content */}
             <div className="md:col-span-7 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
               <p className="font-semibold text-slate-900 text-base sm:text-lg">
-                Neste 10 de julho 2025, a Sorriso Reality completou 25 anos de atividades com os sócios dentistas José Ricardo Guerra e José Henrique Guerra.
+                Neste 10 de julho 2026, a Sorriso Reality completou 26 anos de atividades com os sócios dentistas José Ricardo Guerra e José Henrique Guerra.
               </p>
 
               <p>
@@ -209,19 +209,19 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
           {/* Newspaper Full Columns Continuation */}
           <div className="border-t border-amber-200/80 pt-5 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
             <p>
-              Nesses 25 anos de história, foram <strong>mais de 50 mil clientes atendidos</strong>, todos com muito empenho e dedicação, atuando em todas as áreas da odontologia: clínica geral, próteses, ortodontia, implantes dentários e, agora também, com a moderna área de estética e harmonização facial, sempre com sua marca registrada — <em>preço justo e qualidade!</em>
+              Nesses 26 anos de história, foram <strong>mais de 50 mil clientes atendidos</strong>, todos com muito empenho e dedicação, atuando em todas as áreas da odontologia: clínica geral, próteses, ortodontia, implantes dentários e, agora também, com a moderna área de estética e harmonização facial, sempre com sua marca registrada — <em>preço justo e qualidade!</em>
             </p>
 
             {/* Highlighted Quote Box */}
             <blockquote className="my-4 p-5 rounded-2xl bg-white border-l-4 border-[#008744] shadow-xs text-slate-800 italic">
               <p className="font-medium text-slate-900 not-italic mb-1 text-sm uppercase tracking-wider text-[#008744]">
-                Do Sonho às Bodas de Prata...
+                Do Sonho às 26 Anos de Tradição...
               </p>
               &ldquo;Formados na Universidade de Odontologia de Barretos – SP, os irmãos doutores Ricardo e Henrique nunca se acomodaram no ofício. Muitíssimo pelo contrário: ao longo do tempo, se especializaram em Ortodontia, Implantes e Harmonização Facial, entre outras especialidades; isso sem contar que a Sorriso Reality ainda conta com profissionais parceiros em todas as áreas.&rdquo;
             </blockquote>
 
             <p className="font-semibold text-slate-900">
-              &ldquo;Agradecemos aos nossos pacientes e colaboradores! Sorriso Reality, há 25 anos atendendo e atendendo bem!&rdquo;
+              &ldquo;Agradecemos aos nossos pacientes e colaboradores! Sorriso Reality, há 26 anos atendendo e atendendo bem!&rdquo;
             </p>
 
             {/* Official Contact Strip from the Newspaper */}
@@ -245,7 +245,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
               Informações Consolidadas da Reportagem
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
-              Fatos Históricos da Sorriso Reality (2000 - 2025)
+              Fatos Históricos da Sorriso Reality (2000 - 2026)
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
               Todos os dados e datas confirmados a partir da edição oficial comemorativa do Jornal Nosso Bairro:
@@ -294,10 +294,10 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
             </div>
 
             <div className="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100 flex flex-col">
-              <span className="text-xs font-bold text-[#008744]">10 de Julho de 2025</span>
-              <h4 className="text-sm font-bold text-slate-900 mt-0.5">Bodas de Prata: 25 Anos</h4>
+              <span className="text-xs font-bold text-[#008744]">10 de Julho de 2026</span>
+              <h4 className="text-sm font-bold text-slate-900 mt-0.5">26 Anos de Tradição: 26 Anos</h4>
               <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                Comemoração dos 25 anos com <strong>mais de 50 mil clientes atendidos</strong>, incorporando a área de estética e harmonização facial, com preço justo e qualidade!
+                Comemoração dos 26 anos com <strong>mais de 50 mil clientes atendidos</strong>, incorporando a área de estética e harmonização facial, com preço justo e qualidade!
               </p>
             </div>
           </div>
@@ -388,12 +388,12 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
           </div>
         </section>
 
-        {/* Visual Interactive Timeline (2000 - 2025) */}
+        {/* Visual Interactive Timeline (2000 - 2026) */}
         <section>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-xs font-bold text-[#008744] uppercase tracking-wider">Linha do Tempo</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
-              25 Anos de História e Marcos na Odontologia
+              26 Anos de História e Marcos na Odontologia
             </h2>
             <p className="text-sm text-slate-600 mt-2">
               A evolução desde a primeira portinha na Rua Afonso Sardinha até a clínica de 400m² no térreo da Rua Doze de Outubro.
@@ -412,7 +412,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
             >
               Todos os Anos
             </button>
-            {['2000', '2003', '2009', '2010', '2020', '2025'].map(yr => (
+            {['2000', '2003', '2009', '2010', '2020', '2026'].map(yr => (
               <button
                 key={yr}
                 onClick={() => setSelectedMilestoneYear(yr)}
@@ -478,7 +478,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
           <div className="max-w-3xl mx-auto text-center mb-10">
             <span className="text-xs font-bold text-emerald-200 uppercase tracking-widest">Compromisso Permanente</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
-              Os Pilares que Sustentam Nossos 25 Anos
+              Os Pilares que Sustentam Nossos 26 Anos
             </h2>
             <p className="text-sm sm:text-base text-emerald-100 mt-2">
               Da graduação em Barretos até a liderança odontológica na Lapa, mantemos a mesma essência:
@@ -500,7 +500,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
               <div className="w-10 h-10 rounded-xl bg-white text-[#008744] flex items-center justify-center font-bold mb-4">
                 <Sparkles className="w-5 h-5 text-[#008744]" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">Há 25 Anos Atendendo Bem</h3>
+              <h3 className="text-lg font-bold text-white mb-2">Há 26 Anos Atendendo Bem</h3>
               <p className="text-xs sm:text-sm text-emerald-100 leading-relaxed">
                 Política de atendimento sem burocracia: avaliação inicial 100% gratuita e a comodidade de comparecer sem agendamento prévio.
               </p>
@@ -531,7 +531,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
         {/* Visit Us CTA Banner */}
         <section className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
-            Faça Parte dos Próximos 25 Anos do Seu Sorriso
+            Faça Parte dos Próximos 26 Anos do Seu Sorriso
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto mb-8">
             Venha conhecer nossa unidade na <strong>Rua Doze de Outubro, 651 - Lapa</strong>. Não cobramos pela avaliação inicial e você pode chegar quando quiser durante nosso horário de atendimento.
@@ -539,7 +539,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => onOpenBookingModal('Avaliação Especial 25 Anos')}
+              onClick={() => onOpenBookingModal('Avaliação Especial 26 Anos')}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-bold text-white bg-[#008744] hover:bg-[#007038] shadow-md transition-all cursor-pointer"
             >
               <span>Agendar Minha Avaliação Gratuita</span>

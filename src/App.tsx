@@ -72,7 +72,7 @@ export default function App() {
         onNavigateHistory={navigateToHistory}
       />
 
-      {/* Main Content: Render dedicated 25 Anos History Page OR Home Landing Sections */}
+      {/* Main Content: Render dedicated 26 Anos History Page OR Home Landing Sections */}
       <main className="flex-1">
         {currentPage === 'historia' ? (
           <HistoryPage 

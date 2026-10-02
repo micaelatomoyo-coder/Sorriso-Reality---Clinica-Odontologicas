@@ -36,11 +36,11 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Streamlined navigation links including 25 Anos history
+  // Streamlined navigation links including 26 Anos history
   const navLinks = [
     { label: 'Tratamentos', href: '#tratamentos' },
     { label: 'Sobre', href: '#sobre' },
-    { label: 'História (25 Anos)', href: '#historia', isHistory: true },
+    { label: 'História (26 Anos)', href: '#historia', isHistory: true },
     { label: 'Instagram', href: '#instagram' },
     { label: 'Localização', href: '#localizacao' },
   ];

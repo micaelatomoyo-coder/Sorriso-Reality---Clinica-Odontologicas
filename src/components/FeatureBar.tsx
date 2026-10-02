@@ -22,8 +22,8 @@ export const FeatureBar: React.FC = () => {
     },
     {
       icon: UserCheck,
-      title: "25 Anos de Dedicação",
-      desc: "Bodas de Prata: Dr. Ricardo, Dr. Henrique e equipe de dentistas especialistas na Lapa.",
+      title: "26 Anos de Tradição",
+      desc: "Dr. Ricardo, Dr. Henrique e equipe de dentistas especialistas na Lapa e Freguesia do Ó.",
     },
     {
       icon: Smile,

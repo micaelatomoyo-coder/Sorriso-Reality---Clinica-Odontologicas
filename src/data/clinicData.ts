@@ -155,9 +155,9 @@ export const CLINIC_UNITS: ClinicUnit[] = [
 export const CLINIC_INFO = {
   name: "Sorriso Reality",
   fullName: "Sorriso Reality Clínicas Odontológicas",
-  tagline: "Há 25 anos atendendo e atendendo bem!",
+  tagline: "Há 26 anos atendendo e atendendo bem!",
   motto: "Preço justo e qualidade!",
-  experienceYears: 25,
+  experienceYears: 26,
   dentistsPhoto: "/images/fotodentistas.png",
   units: CLINIC_UNITS,
   dentists: [
@@ -183,7 +183,7 @@ export const CLINIC_INFO = {
     cro: "CRO-SP 66.961",
     specialties: ["Clínica Geral", "Implantodontia", "Reabilitação Oral"],
     image: "/images/dentist_ricardo.png",
-    experienceYears: 25,
+    experienceYears: 26,
   },
   phone: "(11) 97101-2603",
   phoneRaw: "5511971012603",
@@ -224,7 +224,7 @@ export const CLINIC_INFO = {
     { days: "Domingo e Feriados", hours: "Fechado (Plantão Emergencial via WhatsApp)", isClosed: true }
   ],
   stats: [
-    { number: "25 Anos", label: "Bodas de Prata", subtitle: "Fundada em 10 de julho de 2000 na Lapa" },
+    { number: "26 Anos", label: "26 Anos de Tradição", subtitle: "Fundada em 10 de julho de 2000 na Lapa" },
     { number: "50.000+", label: "Pacientes Atendidos", subtitle: "História de carinho e dedicação comprovada" },
     { number: "400 m²", label: "Clínica Térrea", subtitle: "1ª clínica térrea da Rua 12 de Outubro" },
     { number: "100%", label: "Avaliação Gratuita", subtitle: "Preço justo e sem burocracia" },
@@ -241,10 +241,10 @@ export interface HistoryMilestone {
 }
 
 export const CLINIC_HISTORY = {
-  anniversary: "25 Anos",
-  tagline: "Há 25 anos atendendo e atendendo bem!",
+  anniversary: "26 Anos",
+  tagline: "Há 26 anos atendendo e atendendo bem!",
   motto: "Preço justo e qualidade!",
-  theme: "Do Sonho às Bodas de Prata (2000 - 2025)",
+  theme: "Do Sonho às 26 Anos de Tradição (2000 - 2026)",
   foundersPhoto: "/images/fotodentistas.png",
   founders: [
     {
@@ -270,22 +270,22 @@ export const CLINIC_HISTORY = {
     source: "Jornal Nosso Bairro",
     website: "www.jornalnossobairro.com.br",
     email: "jnossobairro@uol.com.br",
-    headline: "Sorriso Reality 25 anos",
-    subheadline: "Do sonho à Bodas de Prata...",
+    headline: "Sorriso Reality 26 anos",
+    subheadline: "Do sonho à 26 Anos de Tradição...",
     photoCaption: "Os sócios e cirurgiões dentistas Dr. José Ricardo Guerra e Dr. José Henrique Guerra",
-    publishedDate: "10 de Julho de 2025",
-    fullText: `Neste 10 de julho 2025, a Sorriso Reality completou 25 anos de atividades com os sócios dentistas José Ricardo Guerra e José Henrique Guerra. Tudo começou lá em 10 de julho de 2000, na Rua Afonso Sardinha, nº 146 – Lapa, quando Dr Ricardo inicia sua trajetória na odontologia e em 2003 já eram 3 clínicas, sendo duas na Lapa e outra na zona leste.
+    publishedDate: "10 de Julho de 2026",
+    fullText: `Neste 10 de julho 2026, a Sorriso Reality completou 26 anos de atividades com os sócios dentistas José Ricardo Guerra e José Henrique Guerra. Tudo começou lá em 10 de julho de 2000, na Rua Afonso Sardinha, nº 146 – Lapa, quando Dr Ricardo inicia sua trajetória na odontologia e em 2003 já eram 3 clínicas, sendo duas na Lapa e outra na zona leste.
 
 Em 2009, seu irmão Dr Henrique se forma e integra a equipe da Sorriso reality.
 
 Em 2010, acontece a inauguração da clínica da Av Itaberaba. E em 2020 a inauguração da unidade 12 de outubro, nº 651, também na Lapa, sendo a primeira clínica no térreo na Rua 12 de Outubro, com mais de 400m².
 
-Nesses 25 anos de história, foram mais de 50 mil clientes atendidos, todos com muito empenho e dedicação, atuando em todas áreas na odontologia, como clínica geral, próteses, ortodontia, implantes e, agora também com a área de estética e harmonização facial, sempre com sua marca, ou seja, preço justo e qualidade!
+Nesses 26 anos de história, foram mais de 50 mil clientes atendidos, todos com muito empenho e dedicação, atuando em todas áreas na odontologia, como clínica geral, próteses, ortodontia, implantes e, agora também com a área de estética e harmonização facial, sempre com sua marca, ou seja, preço justo e qualidade!
 
-Do sonho à Bodas de Prata... Formados na Universidade de Odontologia de Barretos – SP, os irmãos doutores Ricardo e Henrique, nunca se acomodaram no ofício, muitíssimo pelo contrário, ao longo do tempo, se especializaram em Ortodontia, Implantes e Harmonização Facial, entre outras; isso sem contar que a Sorriso Reality ainda conta com profissionais parceiros em todas áreas.
+Do sonho à 26 Anos de Tradição... Formados na Universidade de Odontologia de Barretos – SP, os irmãos doutores Ricardo e Henrique, nunca se acomodaram no ofício, muitíssimo pelo contrário, ao longo do tempo, se especializaram em Ortodontia, Implantes e Harmonização Facial, entre outras; isso sem contar que a Sorriso Reality ainda conta com profissionais parceiros em todas áreas.
 
 Agradecemos aos nossos pacientes e colaboradores!
-Sorriso Reality, há 25 anos atendendo e atendendo bem!
+Sorriso Reality, há 26 anos atendendo e atendendo bem!
 
 R. 12 de Outubro 651 Lapa
 WhatsApp / Telefone: (11) 97101-2603
@@ -333,11 +333,11 @@ Instagram: @clinicas.sorrisoreality  Facebook: Clínicas Sorriso Reality`
       location: "Rua 12 de Outubro, 651 - Lapa",
     },
     {
-      year: "2025",
-      exactDate: "10 de Julho de 2025",
-      title: "Bodas de Prata: 25 Anos de História",
+      year: "2026",
+      exactDate: "10 de Julho de 2026",
+      title: "26 Anos de Tradição: 26 Anos de História",
       subtitle: "Mais de 50 mil clientes atendidos",
-      description: "A Sorriso Reality comemora 25 anos de atividades ininterruptas. Mais de 50.000 clientes atendidos com empenho, dedicação, preço justo e qualidade em clínica geral, próteses, ortodontia, implantes e harmonização facial, com profissionais parceiros em todas as áreas.",
+      description: "A Sorriso Reality comemora 26 anos de atividades ininterruptas. Mais de 50.000 clientes atendidos com empenho, dedicação, preço justo e qualidade em clínica geral, próteses, ortodontia, implantes e harmonização facial, com profissionais parceiros em todas as áreas.",
       location: "Lapa, São Paulo",
     }
   ]

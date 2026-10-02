@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
             <Logo variant="white" size="lg" />
             
             <p className="text-xs sm:text-sm text-emerald-100/70 leading-relaxed font-normal pt-2">
-              Clínica odontológica de referência na Lapa, São Paulo. 25 anos de história e dedicação (Bodas de Prata 2000-2025), cuidado humanizado, avaliação gratuita e equipe multidisciplinar de dentistas especializados.
+              Clínica odontológica de referência em São Paulo. 26 anos de história e dedicação (2000-2026), cuidado humanizado, avaliação gratuita e equipe multidisciplinar de dentistas especializados.
             </p>
 
             <div className="p-3 rounded-xl bg-emerald-950/80 border border-emerald-800/40 text-xs text-emerald-200/90 space-y-2">
@@ -77,8 +77,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
                   onClick={() => onNavigateHistory ? onNavigateHistory() : scrollTo('#sobre')}
                   className="text-emerald-300 font-bold hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1.5"
                 >
-                  <span>História (25 Anos)</span>
-                  <span className="text-[10px] bg-emerald-700 text-white px-1.5 py-0.5 rounded font-bold">Bodas de Prata</span>
+                  <span>História (26 Anos)</span>
+                  <span className="text-[10px] bg-emerald-700 text-white px-1.5 py-0.5 rounded font-bold">Tradição</span>
                 </button>
               </li>
               <li>
@@ -237,7 +237,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
           </p>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Corpo Clínico Especializado • 25 Anos de Dedicação (2000 - 2025)</span>
+            <span>Corpo Clínico Especializado • 26 Anos de Dedicação (2000 - 2026)</span>
           </div>
         </div>
 
