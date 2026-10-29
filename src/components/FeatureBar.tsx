@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   HeartHandshake, 
   Cpu, 
@@ -36,31 +35,6 @@ export const FeatureBar: React.FC = () => {
       desc: "Segunda a sexta das 9h às 18h e sábados das 9h às 13h no polo comercial da Lapa.",
     },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 25 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 16 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
 
   return (
     <section id="diferenciais" className="relative -mt-4 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

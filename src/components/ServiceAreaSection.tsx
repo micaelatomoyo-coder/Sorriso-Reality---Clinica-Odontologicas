@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
   MapPin, 
   Navigation, 
@@ -131,11 +130,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+        <div 
           className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#005a2b] text-xs font-bold uppercase tracking-wider mb-3 shadow-2xs">
@@ -154,7 +149,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
             a Sorriso Reality é referência odontológica para moradores e trabalhadores de toda a Zona Oeste, 
             Zona Norte e cidades adjacentes da Grande São Paulo.
           </p>
-        </motion.div>
+        </div>
 
         {/* Region Switcher Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
@@ -180,12 +175,9 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
         </div>
 
         {/* Active Region Showcase Card */}
-        <motion.article 
+        <article 
           key={currentRegion.id}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="bg-white rounded-3xl border border-slate-200/90 shadow-xl p-6 sm:p-8 lg:p-10"
+          className="bg-white rounded-3xl border border-slate-200/90 shadow-xl p-6 sm:p-8 lg:p-10 transition-all duration-200"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
@@ -289,7 +281,7 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
             </div>
 
           </div>
-        </motion.article>
+        </article>
 
         {/* Global Local SEO Disclaimer Banner */}
         <div className="mt-8 p-4 rounded-2xl bg-white border border-slate-200 text-center text-xs text-slate-600 max-w-4xl mx-auto shadow-2xs">
