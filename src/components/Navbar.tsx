@@ -36,13 +36,12 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Streamlined navigation links including 26 Anos history
   const navLinks = [
     { label: 'Tratamentos', href: '#tratamentos' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'História (26 Anos)', href: '#historia', isHistory: true },
-    { label: 'Instagram', href: '#instagram' },
     { label: 'Localização', href: '#localizacao' },
+    { label: 'Área de Atendimento', href: '#area-de-atendimento' },
   ];
 
   const handleLinkClick = (href: string, isHistory?: boolean) => {
@@ -186,13 +185,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => onOpenBookingModal()}
               aria-label="Agendar avaliação odontológica gratuita"
-              className="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] transition-colors"
+              className="px-3.5 py-2.5 min-h-[44px] rounded-lg text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] transition-colors flex items-center justify-center cursor-pointer"
             >
               Avaliação
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-[#008744] hover:bg-slate-100 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008744]"
+              className="p-2.5 min-w-[44px] min-h-[44px] text-slate-700 hover:text-[#008744] hover:bg-slate-100 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008744] flex items-center justify-center cursor-pointer"
               aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

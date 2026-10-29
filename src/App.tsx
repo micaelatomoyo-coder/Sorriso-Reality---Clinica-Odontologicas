@@ -8,6 +8,7 @@ import { AppointmentSimulator } from './components/AppointmentSimulator';
 import { Testimonials } from './components/Testimonials';
 import { InstagramSection } from './components/InstagramSection';
 import { LocationSection } from './components/LocationSection';
+import { ServiceAreaSection } from './components/ServiceAreaSection';
 import { FaqSection } from './components/FaqSection';
 import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
@@ -112,6 +113,9 @@ export default function App() {
 
             {/* Location, Map & Public Transport Guide in Lapa */}
             <LocationSection />
+
+            {/* Local SEO & Coverage Service Area Section */}
+            <ServiceAreaSection onOpenBookingModal={handleOpenBookingModal} />
 
             {/* Frequently Asked Questions Accordion */}
             <FaqSection />

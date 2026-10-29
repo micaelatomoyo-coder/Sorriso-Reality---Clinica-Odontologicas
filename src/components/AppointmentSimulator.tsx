@@ -215,10 +215,11 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
 
                   <form onSubmit={handleSendWhatsapp} className="space-y-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      <label htmlFor="walkin-patient-name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         Seu Nome (Opcional - para avisar a recepção da {activeUnit.shortName})
                       </label>
                       <input
+                        id="walkin-patient-name"
                         type="text"
                         placeholder="Ex: Ana Paula da Silva"
                         value={patientName}
@@ -291,10 +292,12 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                   {/* Day & Period Selection */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                      <label htmlFor="booking-select-day" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
                         2. Dia Preferencial
                       </label>
                       <select
+                        id="booking-select-day"
+                        aria-label="2. Dia Preferencial"
                         value={selectedDayType}
                         onChange={(e) => setSelectedDayType(e.target.value)}
                         className="w-full px-3.5 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium bg-white focus:outline-none focus:ring-2 focus:ring-[#008744]"
@@ -306,10 +309,12 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                      <label htmlFor="booking-select-period" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
                         3. Horário de Preferência
                       </label>
                       <select
+                        id="booking-select-period"
+                        aria-label="3. Horário de Preferência"
                         value={selectedPeriod}
                         onChange={(e) => setSelectedPeriod(e.target.value)}
                         className="w-full px-3.5 py-3 rounded-xl border border-slate-200 text-xs sm:text-sm font-medium bg-white focus:outline-none focus:ring-2 focus:ring-[#008744]"
@@ -324,12 +329,13 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                   {/* Patient Information */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
+                      <label htmlFor="booking-patient-fullname" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                         Seu Nome Completo *
                       </label>
                       <div className="relative">
                         <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
                         <input
+                          id="booking-patient-fullname"
                           type="text"
                           required
                           placeholder="Ex: Maria da Silva"
@@ -341,12 +347,13 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
+                      <label htmlFor="booking-patient-telephone" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                         Telefone / WhatsApp *
                       </label>
                       <div className="relative">
                         <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
                         <input
+                          id="booking-patient-telephone"
                           type="tel"
                           required
                           placeholder="(11) 99999-9999"
@@ -360,10 +367,11 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
 
                   {/* Optional Note */}
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="booking-patient-notes" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
                       Alguma observação ou sintoma? (Opcional)
                     </label>
                     <input
+                      id="booking-patient-notes"
                       type="text"
                       placeholder="Ex: Gostaria de fazer uma avaliação para implante ou clareamento"
                       value={notes}

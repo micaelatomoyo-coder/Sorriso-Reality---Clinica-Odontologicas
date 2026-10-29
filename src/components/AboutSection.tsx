@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Player from '@vimeo/player';
 import { CLINIC_INFO } from '../data/clinicData';
 import { 
   Award, 
@@ -23,14 +22,16 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, onNavigateHistory }) => {
   const videoIframeRef = useRef<HTMLIFrameElement>(null);
-  const playerInstanceRef = useRef<Player | null>(null);
+  const playerInstanceRef = useRef<any>(null);
 
-  const handleIframeLoad = () => {
+  const handleIframeLoad = async () => {
     if (!videoIframeRef.current) return;
     try {
       if (playerInstanceRef.current) {
         playerInstanceRef.current.destroy().catch(() => {});
       }
+      const { default: Player } = await import('@vimeo/player');
+      if (!videoIframeRef.current) return;
       const player = new Player(videoIframeRef.current);
       playerInstanceRef.current = player;
       let cutoffDuration = 31; // Total duration ~37s, cut last 6 seconds
@@ -219,10 +220,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               >
                 <iframe 
                   ref={videoIframeRef}
-                  src="https://player.vimeo.com/video/1231391663?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479%2Fembed" 
+                  src="https://player.vimeo.com/video/1231391663?dnt=1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479%2Fembed" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen 
+                  loading="lazy"
+                  width="320"
+                  height="568"
                   title="Apresentação Sorriso Reality"
                   onLoad={handleIframeLoad}
                   className="absolute inset-0 w-full h-full border-0"

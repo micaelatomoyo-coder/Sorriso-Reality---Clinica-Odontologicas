@@ -73,16 +73,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               </span>
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Main Headline with Category + City for Local SEO */}
             <motion.h1 
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.08, ease: 'easeOut' }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] font-extrabold text-slate-900 leading-[1.12] tracking-tight mb-5"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] font-extrabold text-slate-900 leading-[1.14] tracking-tight mb-5"
             >
-              Cuidado Excepcional para o Seu{' '}
+              Clínica Odontológica em São Paulo:{' '}
               <span className="text-[#008744] relative inline-block">
-                Sorriso.
+                Cuidado Excepcional para o Seu Sorriso.
                 <svg
                   className="absolute -bottom-1.5 left-0 w-full h-2 text-[#008744]/35"
                   viewBox="0 0 100 8"
@@ -98,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.16, ease: 'easeOut' }}
-              className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal"
+              className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-normal"
             >
               Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, celebramos 26 anos de dedicação (2000-2026) com tecnologia moderna, preço justo e acolhimento humano. Equipe completa de cirurgiões dentistas nas unidades Lapa e Freguesia do Ó com avaliação inicial gratuita.
             </motion.p>
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.22, ease: 'easeOut' }}
-              className="flex flex-wrap gap-2.5 sm:gap-3 mb-8 text-xs sm:text-sm text-slate-700"
+              className="flex flex-wrap gap-2.5 sm:gap-3 mb-8 text-xs sm:text-sm text-slate-800"
             >
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50/95 border border-emerald-200 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                 href={CLINIC_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-[#006030] bg-white hover:bg-emerald-50/90 border border-emerald-300 shadow-xs transition-colors text-center"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-[#005a2b] bg-white hover:bg-emerald-50/90 border border-emerald-300 shadow-xs transition-colors text-center"
               >
                 <MessageCircle className="w-5 h-5 text-[#008744]" />
                 <span>Conversar no WhatsApp</span>
@@ -168,8 +168,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
               </div>
               <div className="text-left">
                 <p className="text-xs font-bold text-slate-900">Sorriso Reality Clínicas</p>
-                <p className="text-[11px] text-slate-500">26 Anos de Tradição em SP</p>
-                <div className="flex items-center gap-1 text-[10px] text-emerald-700 font-semibold mt-0.5">
+                <p className="text-[11px] text-slate-700 font-medium">26 Anos de Tradição em SP</p>
+                <div className="flex items-center gap-1 text-[10px] text-emerald-800 font-bold mt-0.5">
                   <MapPin className="w-3 h-3 text-[#008744]" />
                   <span>Rua Doze de Outubro, 651 - Lapa</span>
                 </div>

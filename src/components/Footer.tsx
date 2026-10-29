@@ -118,7 +118,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
                   onClick={() => scrollTo('#localizacao')}
                   className="hover:text-emerald-300 transition-colors cursor-pointer"
                 >
-                  Como Chegar na Lapa
+                  Unidades &amp; Rotas
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollTo('#area-de-atendimento')}
+                  className="hover:text-emerald-300 transition-colors cursor-pointer text-emerald-300 font-semibold"
+                >
+                  Área de Atendimento (Bairros SP)
                 </button>
               </li>
               <li>

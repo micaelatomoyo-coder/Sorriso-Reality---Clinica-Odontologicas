@@ -23,6 +23,11 @@
 - Clínica Geral, Limpeza e Prevenção
 - Urgência Odontológica (Alívio Imediato da Dor)
 
+## Área de Atendimento e Bairros Cobertos (São Paulo)
+- **Zona Oeste (Unidade Lapa):** Lapa, Alto da Lapa, Lapa de Baixo, Vila Romana, Perdizes, Pompéia, Barra Funda, Vila Anastácio, Vila Leopoldina, Jaguaré, Vila Ipojuca, Água Branca, Pinheiros.
+- **Zona Norte (Unidade Freguesia do Ó):** Freguesia do Ó, Brasilândia, Itaberaba, Limão, Casa Verde, Vila Nova Cachoeirinha, Cachoeirinha, Morro Grande, Pirituba, Taipas, Mandaqui, Santana.
+- **Grande São Paulo e Entorno:** Osasco, Carapicuíba, Barueri, Caieiras, Franco da Rocha.
+
 ## Perguntas Frequentes (FAQ)
 
 ### Q: Preciso agendar horário para ser atendido?
