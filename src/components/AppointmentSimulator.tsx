@@ -95,9 +95,9 @@ export const AppointmentSimulator: React.FC<AppointmentSimulatorProps> = ({
               <Sparkles className="w-3.5 h-3.5" />
               <span>Agendamento Rápido &amp; Sem Complicações</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
               Agende sua Avaliação Gratuita
-            </h3>
+            </h2>
             <p className="text-sm sm:text-base text-emerald-100/90 mt-1 font-normal">
               Escolha a unidade mais próxima (Lapa ou Freguesia do Ó) e agende seu horário ou compareça sem hora marcada.
             </p>

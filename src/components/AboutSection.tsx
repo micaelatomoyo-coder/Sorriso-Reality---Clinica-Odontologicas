@@ -139,9 +139,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                 <div className="inline-block text-[11px] font-bold text-[#005a2b] bg-emerald-100/90 px-2 py-0.5 rounded mb-1">
                   Cirurgião Dentista • Sócio-Fundador
                 </div>
-                <h4 className="text-lg font-extrabold text-slate-900 leading-tight">
+                <h3 className="text-lg font-extrabold text-slate-900 leading-tight">
                   Dr. José Ricardo Guerra
-                </h4>
+                </h3>
                 <p className="text-xs font-extrabold text-[#005a2b] mt-0.5">
                   CRO-SP 66.961 • Desde 2000 na Lapa
                 </p>
@@ -184,9 +184,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                 <div className="inline-block text-[11px] font-bold text-[#005a2b] bg-emerald-100/90 px-2 py-0.5 rounded mb-1">
                   Cirurgião Dentista • Sócio
                 </div>
-                <h4 className="text-lg font-extrabold text-slate-900 leading-tight">
+                <h3 className="text-lg font-extrabold text-slate-900 leading-tight">
                   Dr. José Henrique Guerra
-                </h4>
+                </h3>
                 <p className="text-xs font-extrabold text-[#005a2b] mt-0.5">
                   CRO-SP 97.458 • Formado Barretos-SP
                 </p>
@@ -239,9 +239,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                       >
                         <Play className="w-7 h-7 fill-white text-white ml-1 group-hover:scale-105 transition-transform" />
                       </button>
-                      <h4 className="text-white font-extrabold text-sm sm:text-base leading-tight mb-1">
+                      <h3 className="text-white font-extrabold text-sm sm:text-base leading-tight mb-1">
                         Tour pela Clínica Sorriso Reality
-                      </h4>
+                      </h3>
                       <p className="text-emerald-200/90 text-xs font-medium">
                         Conheça nossa estrutura na Lapa (30s)
                       </p>

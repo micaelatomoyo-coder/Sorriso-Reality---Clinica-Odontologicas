@@ -55,6 +55,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onOpenBookingModal }) => {
               href={CLINIC_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Conversar no WhatsApp com a Recepção da Sorriso Reality Lapa"
               className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-4 rounded-xl font-bold text-white bg-emerald-800/80 hover:bg-emerald-800 border border-emerald-400/40 transition-colors text-sm text-center"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300" />

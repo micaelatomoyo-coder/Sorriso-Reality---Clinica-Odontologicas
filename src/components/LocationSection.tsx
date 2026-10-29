@@ -258,10 +258,10 @@ export const LocationSection: React.FC = () => {
 
               {/* Public Transport & Access Guide */}
               <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs text-xs text-slate-700 space-y-3">
-                <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5">
+                <h3 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5">
                   <Bus className="w-4 h-4 text-[#008744]" />
                   Como Chegar na {activeUnit.shortName}:
-                </h4>
+                </h3>
                 <ul className="space-y-2.5 text-slate-600">
                   {activeUnit.transport.trainOrMetro && (
                     <li className="flex items-start gap-2">

@@ -118,6 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                 href={CLINIC_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Conversar no WhatsApp com a Sorriso Reality Lapa"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-[#005a2b] bg-white hover:bg-emerald-50/90 border border-emerald-300 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center"
               >
                 <MessageCircle className="w-5 h-5 text-[#008744]" />

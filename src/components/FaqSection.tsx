@@ -117,13 +117,14 @@ export const FaqSection: React.FC = () => {
           className="mt-10 text-center p-6 rounded-3xl bg-white border border-emerald-100 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="text-left">
-            <h4 className="text-sm font-bold text-slate-900">Ainda tem alguma dúvida específica?</h4>
-            <p className="text-xs text-slate-500">Nossa recepção e a equipe de dentistas da Sorriso Reality estão prontos para te atender.</p>
+            <h3 className="text-sm font-bold text-slate-900">Ainda tem alguma dúvida específica?</h3>
+            <p className="text-xs text-slate-600 font-medium">Nossa recepção e a equipe de dentistas da Sorriso Reality estão prontos para te atender.</p>
           </div>
           <a
             href={CLINIC_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Conversar no WhatsApp com a Recepção da Sorriso Reality Lapa"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#008744] hover:bg-[#007038] transition-colors shrink-0"
           >
             <MessageCircle className="w-4 h-4" />

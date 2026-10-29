@@ -52,9 +52,9 @@ export const FeatureBar: React.FC = () => {
                 <div className="w-11 h-11 rounded-2xl bg-emerald-50 text-[#008744] flex items-center justify-center mb-3.5 group-hover:bg-[#008744] group-hover:text-white transition-colors duration-200">
                   <Icon className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 mb-1 tracking-tight">
+                <h2 className="text-sm sm:text-base font-bold text-slate-900 mb-1 tracking-tight">
                   {item.title}
-                </h3>
+                </h2>
                 <p className="text-xs sm:text-xs text-slate-500 leading-relaxed font-normal">
                   {item.desc}
                 </p>
