@@ -64,20 +64,15 @@ export const FeatureBar: React.FC = () => {
 
   return (
     <section id="diferenciais" className="relative -mt-4 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+      <div
         className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-4 sm:p-6 lg:p-8"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-4 lg:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
           {features.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <div
                 key={idx}
-                variants={itemVariants}
                 className="flex flex-col items-start pt-4 sm:pt-0 sm:px-3 lg:px-4 first:pt-0 sm:first:pl-0 last:pr-0 group"
               >
                 <div className="w-11 h-11 rounded-2xl bg-emerald-50 text-[#008744] flex items-center justify-center mb-3.5 group-hover:bg-[#008744] group-hover:text-white transition-colors duration-200">
@@ -89,11 +84,11 @@ export const FeatureBar: React.FC = () => {
                 <p className="text-xs sm:text-xs text-slate-500 leading-relaxed font-normal">
                   {item.desc}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

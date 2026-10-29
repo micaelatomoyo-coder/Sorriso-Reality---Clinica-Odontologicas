@@ -2,17 +2,17 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { FeatureBar } from './components/FeatureBar';
-import { ServicesSection } from './components/ServicesSection';
-import { AboutSection } from './components/AboutSection';
-import { AppointmentSimulator } from './components/AppointmentSimulator';
-import { LocationSection } from './components/LocationSection';
-import { ServiceAreaSection } from './components/ServiceAreaSection';
-import { FaqSection } from './components/FaqSection';
-import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 
+const ServicesSection = lazy(() => import('./components/ServicesSection').then(m => ({ default: m.ServicesSection })));
+const AboutSection = lazy(() => import('./components/AboutSection').then(m => ({ default: m.AboutSection })));
+const AppointmentSimulator = lazy(() => import('./components/AppointmentSimulator').then(m => ({ default: m.AppointmentSimulator })));
+const LocationSection = lazy(() => import('./components/LocationSection').then(m => ({ default: m.LocationSection })));
+const ServiceAreaSection = lazy(() => import('./components/ServiceAreaSection').then(m => ({ default: m.ServiceAreaSection })));
+const FaqSection = lazy(() => import('./components/FaqSection').then(m => ({ default: m.FaqSection })));
+const CtaBanner = lazy(() => import('./components/CtaBanner').then(m => ({ default: m.CtaBanner })));
 const Testimonials = lazy(() => import('./components/Testimonials').then(m => ({ default: m.Testimonials })));
 const InstagramSection = lazy(() => import('./components/InstagramSection').then(m => ({ default: m.InstagramSection })));
 const HistoryPage = lazy(() => import('./components/HistoryPage').then(m => ({ default: m.HistoryPage })));
@@ -91,41 +91,39 @@ export default function App() {
             {/* 5-Pillar Feature Bar (Under Hero) */}
             <FeatureBar />
 
-            {/* Complete Dental Care Solutions (6-card Grid matching inspiration layout) */}
-            <ServicesSection onOpenBookingModal={handleOpenBookingModal} />
-
-            {/* About Sorriso Reality Clinic & Dental Team */}
-            <AboutSection 
-              onOpenBookingModal={() => handleOpenBookingModal()} 
-              onNavigateHistory={navigateToHistory}
-            />
-
-            {/* Embedded Interactive Booking & Walk-in Simulator */}
-            <section id="agendar" className="scroll-mt-20">
-              <AppointmentSimulator isModal={false} />
-            </section>
-
-            {/* Patient Reviews & Loved by Our Patients */}
             <Suspense fallback={null}>
+              {/* Complete Dental Care Solutions (6-card Grid) */}
+              <ServicesSection onOpenBookingModal={handleOpenBookingModal} />
+
+              {/* About Sorriso Reality Clinic & Dental Team */}
+              <AboutSection 
+                onOpenBookingModal={() => handleOpenBookingModal()} 
+                onNavigateHistory={navigateToHistory}
+              />
+
+              {/* Embedded Interactive Booking & Walk-in Simulator */}
+              <section id="agendar" className="scroll-mt-20">
+                <AppointmentSimulator isModal={false} />
+              </section>
+
+              {/* Patient Reviews & Loved by Our Patients */}
               <Testimonials />
-            </Suspense>
 
-            {/* Live Instagram Feed Embed */}
-            <Suspense fallback={null}>
+              {/* Live Instagram Feed Embed */}
               <InstagramSection />
+
+              {/* Location, Map & Public Transport Guide in Lapa */}
+              <LocationSection />
+
+              {/* Local SEO & Coverage Service Area Section */}
+              <ServiceAreaSection onOpenBookingModal={handleOpenBookingModal} />
+
+              {/* Frequently Asked Questions Accordion */}
+              <FaqSection />
+
+              {/* Pre-Footer Action Banner */}
+              <CtaBanner onOpenBookingModal={() => handleOpenBookingModal()} />
             </Suspense>
-
-            {/* Location, Map & Public Transport Guide in Lapa */}
-            <LocationSection />
-
-            {/* Local SEO & Coverage Service Area Section */}
-            <ServiceAreaSection onOpenBookingModal={handleOpenBookingModal} />
-
-            {/* Frequently Asked Questions Accordion */}
-            <FaqSection />
-
-            {/* Pre-Footer Action Banner */}
-            <CtaBanner onOpenBookingModal={() => handleOpenBookingModal()} />
           </>
         )}
       </main>

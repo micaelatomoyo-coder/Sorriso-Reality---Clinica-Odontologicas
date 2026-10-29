@@ -61,25 +61,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
           <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left max-w-xl">
             
             {/* Top Badge */}
-            <motion.div 
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-[#006a38] text-xs font-semibold mb-4 shadow-2xs"
-            >
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-[#006a38] text-xs font-semibold mb-4 shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
               <span className="tracking-wide uppercase text-[11px] sm:text-xs">
                 Clínica Odontológica na Lapa • Sem Agendamento Obrigatório
               </span>
-            </motion.div>
+            </div>
 
             {/* Main Headline with Category + City for Local SEO */}
-            <motion.h1 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.08, ease: 'easeOut' }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] font-extrabold text-slate-900 leading-[1.14] tracking-tight mb-5"
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] font-extrabold text-slate-900 leading-[1.14] tracking-tight mb-5">
               Clínica Odontológica em São Paulo:{' '}
               <span className="text-[#008744] relative inline-block">
                 Cuidado Excepcional para o Seu Sorriso.
@@ -91,25 +81,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                   <path d="M0,5 Q50,0 100,5" stroke="currentColor" strokeWidth="3" fill="none" />
                 </svg>
               </span>
-            </motion.h1>
+            </h1>
 
             {/* Subtitle */}
-            <motion.p 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.16, ease: 'easeOut' }}
-              className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-normal"
-            >
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-normal">
               Na <strong className="font-semibold text-slate-900">Sorriso Reality</strong>, celebramos 26 anos de dedicação (2000-2026) com tecnologia moderna, preço justo e acolhimento humano. Equipe completa de cirurgiões dentistas nas unidades Lapa e Freguesia do Ó com avaliação inicial gratuita.
-            </motion.p>
+            </p>
 
             {/* Quick Benefits Bullet Badges */}
-            <motion.div 
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.22, ease: 'easeOut' }}
-              className="flex flex-wrap gap-2.5 sm:gap-3 mb-8 text-xs sm:text-sm text-slate-800"
-            >
+            <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-8 text-xs sm:text-sm text-slate-800">
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50/95 border border-emerald-200 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>Avaliação 100% Gratuita</span>
@@ -122,47 +102,34 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                 <CheckCircle2 className="w-4 h-4 text-[#008744] shrink-0" />
                 <span>Em até 12x sem juros</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Action CTAs */}
-            <motion.div 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.3, ease: 'easeOut' }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8"
-            >
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8">
+              <button
+                type="button"
                 onClick={onOpenBookingModal}
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold text-white bg-[#008744] hover:bg-[#007038] active:bg-[#005a2b] shadow-lg shadow-emerald-700/25 hover:shadow-xl transition-all duration-200 cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold text-white bg-[#008744] hover:bg-[#007038] active:bg-[#005a2b] shadow-lg shadow-emerald-700/25 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 cursor-pointer text-center"
               >
                 <span>Agendar Avaliação Gratuita</span>
                 <ArrowRight className="w-4 h-4" />
-              </motion.button>
+              </button>
 
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <a
                 href={CLINIC_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-[#005a2b] bg-white hover:bg-emerald-50/90 border border-emerald-300 shadow-xs transition-colors text-center"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm sm:text-base font-semibold text-[#005a2b] bg-white hover:bg-emerald-50/90 border border-emerald-300 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-center"
               >
                 <MessageCircle className="w-5 h-5 text-[#008744]" />
                 <span>Conversar no WhatsApp</span>
-              </motion.a>
-            </motion.div>
+              </a>
+            </div>
           </div>
 
           {/* Right Column: Discreet Doctor Badge positioned at bottom right */}
           <div className="lg:col-span-5 xl:col-span-6 hidden lg:flex justify-end items-end h-full pb-8 pr-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
-              className="bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3 max-w-xs"
-            >
+            <div className="bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3 max-w-xs">
               <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
                 <ShieldCheck className="w-5 h-5 text-white" />
               </div>
@@ -174,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                   <span>Rua Doze de Outubro, 651 - Lapa</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>
