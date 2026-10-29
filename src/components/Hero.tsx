@@ -60,8 +60,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
           <div className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left max-w-xl">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/90 text-[#006a38] text-xs font-semibold mb-4 shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#008744]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-300 text-[#005a2b] text-xs font-bold mb-4 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#005a2b]" />
               <span className="tracking-wide uppercase text-[11px] sm:text-xs">
                 Clínica Odontológica na Lapa • Sem Agendamento Obrigatório
               </span>

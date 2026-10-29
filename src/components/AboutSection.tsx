@@ -136,22 +136,22 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                 </span>
               </div>
               <div className="text-center sm:text-left flex-1">
-                <div className="inline-block text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded mb-1">
+                <div className="inline-block text-[11px] font-bold text-[#005a2b] bg-emerald-100/90 px-2 py-0.5 rounded mb-1">
                   Cirurgião Dentista • Sócio-Fundador
                 </div>
                 <h4 className="text-lg font-extrabold text-slate-900 leading-tight">
                   Dr. José Ricardo Guerra
                 </h4>
-                <p className="text-xs font-bold text-[#008744] mt-0.5">
+                <p className="text-xs font-extrabold text-[#005a2b] mt-0.5">
                   CRO-SP 66.961 • Desde 2000 na Lapa
                 </p>
-                <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                <p className="text-xs text-slate-700 mt-2 leading-relaxed font-normal">
                   Experiência consolidada em clínica geral, reabilitação oral, implantodontia e cirurgias, com foco em atendimento humanizado e seguro.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-3 justify-center sm:justify-start">
-                  <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Implantes</span>
-                  <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Clínica Geral</span>
-                  <span className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Reabilitação Oral</span>
+                  <span className="text-[10px] bg-slate-100 text-slate-900 px-2 py-0.5 rounded font-bold">Implantes</span>
+                  <span className="text-[10px] bg-slate-100 text-slate-900 px-2 py-0.5 rounded font-bold">Clínica Geral</span>
+                  <span className="text-[10px] bg-slate-100 text-slate-900 px-2 py-0.5 rounded font-bold">Reabilitação Oral</span>
                 </div>
               </div>
             </motion.div>
@@ -181,16 +181,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                 </span>
               </div>
               <div className="text-center sm:text-left flex-1">
-                <div className="inline-block text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded mb-1">
+                <div className="inline-block text-[11px] font-bold text-[#005a2b] bg-emerald-100/90 px-2 py-0.5 rounded mb-1">
                   Cirurgião Dentista • Sócio
                 </div>
                 <h4 className="text-lg font-extrabold text-slate-900 leading-tight">
                   Dr. José Henrique Guerra
                 </h4>
-                <p className="text-xs font-bold text-[#008744] mt-0.5">
+                <p className="text-xs font-extrabold text-[#005a2b] mt-0.5">
                   CRO-SP 97.458 • Formado Barretos-SP
                 </p>
-                <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                <p className="text-xs text-slate-700 mt-2 leading-relaxed font-normal">
                   Atuação dedicada em clínica geral, estética do sorriso, clareamento dental, próteses e alinhamento ortodôntico moderno.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-3 justify-center sm:justify-start">

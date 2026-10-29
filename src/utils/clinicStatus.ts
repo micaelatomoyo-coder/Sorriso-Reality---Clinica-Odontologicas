@@ -18,8 +18,8 @@ export function getClinicCurrentStatus(): {
     return {
       isOpen: false,
       statusText: "Fechado hoje (Abre Seg às 09h) • Plantão WhatsApp Ativo",
-      badgeClass: "bg-amber-50 text-amber-800 border-amber-200",
-      dotClass: "bg-amber-500",
+      badgeClass: "bg-amber-100 text-amber-950 border-amber-300 font-bold",
+      dotClass: "bg-amber-600",
     };
   }
 
@@ -29,22 +29,22 @@ export function getClinicCurrentStatus(): {
       return {
         isOpen: true,
         statusText: "Aberto agora até as 13h • Sem agendamento!",
-        badgeClass: "bg-emerald-50 text-emerald-800 border-emerald-200",
-        dotClass: "bg-emerald-500",
+        badgeClass: "bg-emerald-100 text-[#005a2b] border-emerald-300 font-extrabold",
+        dotClass: "bg-emerald-600",
       };
     } else if (timeVal < 9) {
       return {
         isOpen: false,
         statusText: "Abre hoje às 09h (Sábado até 13h)",
-        badgeClass: "bg-slate-50 text-slate-700 border-slate-200",
-        dotClass: "bg-slate-400",
+        badgeClass: "bg-slate-100 text-slate-900 border-slate-300 font-bold",
+        dotClass: "bg-slate-500",
       };
     } else {
       return {
         isOpen: false,
         statusText: "Fechado por hoje (Abre Seg às 09h)",
-        badgeClass: "bg-slate-50 text-slate-700 border-slate-200",
-        dotClass: "bg-slate-400",
+        badgeClass: "bg-slate-100 text-slate-900 border-slate-300 font-bold",
+        dotClass: "bg-slate-500",
       };
     }
   }
@@ -54,22 +54,22 @@ export function getClinicCurrentStatus(): {
     return {
       isOpen: true,
       statusText: "Aberto agora até as 18h • Sem agendamento!",
-      badgeClass: "bg-emerald-50 text-emerald-800 border-emerald-200",
-      dotClass: "bg-emerald-500",
+      badgeClass: "bg-emerald-100 text-[#005a2b] border-emerald-300 font-extrabold",
+      dotClass: "bg-emerald-600",
     };
   } else if (timeVal < 9) {
     return {
       isOpen: false,
       statusText: "Abre hoje às 09h • Avaliação Gratuita",
-      badgeClass: "bg-slate-50 text-slate-700 border-slate-200",
-      dotClass: "bg-slate-400",
+      badgeClass: "bg-slate-100 text-slate-900 border-slate-300 font-bold",
+      dotClass: "bg-slate-500",
     };
   } else {
     return {
       isOpen: false,
       statusText: "Fechado agora (Abre amanhã às 09h) • Envie mensagem!",
-      badgeClass: "bg-slate-50 text-slate-700 border-slate-200",
-      dotClass: "bg-slate-400",
+      badgeClass: "bg-slate-100 text-slate-900 border-slate-300 font-bold",
+      dotClass: "bg-slate-500",
     };
   }
 }

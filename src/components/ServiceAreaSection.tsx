@@ -184,8 +184,8 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
             {/* Left Column: Region Details */}
             <div className="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-50 text-[#006030] text-xs font-semibold mb-3 border border-emerald-200/70">
-                  <Building2 className="w-3.5 h-3.5 text-[#008744]" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-100/90 text-[#005a2b] text-xs font-bold mb-3 border border-emerald-300">
+                  <Building2 className="w-3.5 h-3.5 text-[#005a2b]" />
                   <span>Unidade Referência: {currentRegion.nearestUnit}</span>
                 </div>
 

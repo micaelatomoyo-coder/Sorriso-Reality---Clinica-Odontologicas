@@ -136,7 +136,7 @@ export const LocationSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-2xl bg-[#008744] text-white flex items-center justify-center shadow-xs">
                     <MapPin className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-bold text-[#008744] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                  <span className="text-xs font-extrabold text-[#005a2b] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-300">
                     {activeUnit.neighborhood}
                   </span>
                 </div>
@@ -144,14 +144,14 @@ export const LocationSection: React.FC = () => {
                 <h3 className="text-xl font-extrabold text-slate-900 mb-1">
                   {activeUnit.name}
                 </h3>
-                <p className="text-xs text-slate-500 mb-3">
+                <p className="text-xs text-slate-600 mb-3 font-medium">
                   Sorriso Reality Clínicas Odontológicas
                 </p>
 
-                <p className="text-base font-bold text-slate-800 leading-snug">
+                <p className="text-base font-bold text-slate-900 leading-snug">
                   {activeUnit.address.street}
                 </p>
-                <p className="text-xs sm:text-sm text-slate-500 mb-4">
+                <p className="text-xs sm:text-sm text-slate-600 mb-4 font-medium">
                   {activeUnit.address.neighborhood} — {activeUnit.address.city}/{activeUnit.address.state} • CEP {activeUnit.address.cep}
                 </p>
 
@@ -159,30 +159,30 @@ export const LocationSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => handleCopyAddress(activeUnit)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer mb-5"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-slate-50 border border-slate-200 text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer mb-5"
                 >
                   {copiedUnitId === activeUnit.id ? (
                     <>
-                      <Check className="w-4 h-4 text-emerald-600" />
-                      <span className="text-emerald-700 font-bold">Endereço Copiado com Sucesso!</span>
+                      <Check className="w-4 h-4 text-[#005a2b]" />
+                      <span className="text-[#005a2b] font-bold">Endereço Copiado com Sucesso!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-slate-500" />
+                      <Copy className="w-4 h-4 text-slate-600" />
                       <span>Copiar Endereço Completo</span>
                     </>
                   )}
                 </button>
 
                 {/* Direct Contact Button */}
-                <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 mb-5 space-y-3">
+                <div className="p-4 rounded-2xl bg-emerald-50/90 border border-emerald-200/90 mb-5 space-y-3">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-3 text-left">
                       <div className="w-10 h-10 rounded-xl bg-[#008744] text-white flex items-center justify-center shrink-0">
                         <MessageCircle className="w-5 h-5" />
                       </div>
                       <div>
-                        <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block">
+                        <span className="text-[10px] font-bold text-[#005a2b] uppercase tracking-wider block">
                           WhatsApp Oficial ({activeUnit.shortName}):
                         </span>
                         <strong className="text-sm font-extrabold text-slate-900">
@@ -203,14 +203,14 @@ export const LocationSection: React.FC = () => {
                   </div>
 
                   {activeUnit.landline && (
-                    <div className="pt-2.5 border-t border-emerald-200/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
-                      <div className="flex items-center gap-2 text-slate-700">
-                        <Phone className="w-4 h-4 text-emerald-700 shrink-0" />
+                    <div className="pt-2.5 border-t border-emerald-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
+                      <div className="flex items-center gap-2 text-slate-800">
+                        <Phone className="w-4 h-4 text-[#005a2b] shrink-0" />
                         <span><strong>Telefone Fixo:</strong> {activeUnit.landline}</span>
                       </div>
                       <a
                         href={`tel:${activeUnit.landlineRaw || '551143060023'}`}
-                        className="text-xs font-bold text-[#008744] hover:underline"
+                        className="text-xs font-bold text-[#005a2b] hover:underline"
                       >
                         Ligar no Fixo
                       </a>
@@ -225,11 +225,9 @@ export const LocationSection: React.FC = () => {
                     <span>Horário de Funcionamento ({activeUnit.shortName}):</span>
                   </div>
                   {activeUnit.hours.map((h, i) => (
-                    <div key={i} className={`flex justify-between py-1 border-b border-slate-100 last:border-0 ${
-                      h.isClosed ? 'text-slate-400 italic' : 'text-slate-600'
-                    }`}>
+                    <div key={i} className="flex justify-between py-1 border-b border-slate-100 last:border-0 text-slate-800 font-medium">
                       <span>{h.days}:</span>
-                      <strong className={h.isClosed ? 'font-normal' : 'text-slate-900 font-semibold'}>{h.hours}</strong>
+                      <strong className={h.isClosed ? 'font-bold text-slate-800' : 'text-slate-900 font-extrabold'}>{h.hours}</strong>
                     </div>
                   ))}
                 </div>
