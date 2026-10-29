@@ -260,9 +260,9 @@ export const ServiceAreaSection: React.FC<ServiceAreaSectionProps> = ({ onOpenBo
             <div className="lg:col-span-5 bg-gradient-to-br from-slate-50 to-emerald-50/40 p-5 sm:p-6 rounded-2xl border border-slate-200/80">
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="w-4 h-4 text-[#008744]" />
-                <h4 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">
+                <h3 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">
                   Principais Bairros Atendidos:
-                </h4>
+                </h3>
               </div>
               <p className="text-xs text-slate-600 mb-4">
                 Atendemos pacientes com proximidade de deslocamento, ponto de ônibus e transporte integrado:

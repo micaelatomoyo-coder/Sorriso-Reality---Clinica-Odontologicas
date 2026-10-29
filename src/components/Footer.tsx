@@ -52,9 +52,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
 
           {/* Col 2: Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-white text-xs font-bold uppercase tracking-wider">
+            <h3 className="text-white text-xs font-bold uppercase tracking-wider">
               Navegação
-            </h4>
+            </h3>
             <ul className="space-y-2 text-xs">
               <li>
                 <button
@@ -142,9 +142,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
 
           {/* Col 3: Services */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-white text-xs font-bold uppercase tracking-wider">
+            <h3 className="text-white text-xs font-bold uppercase tracking-wider">
               Tratamentos
-            </h4>
+            </h3>
             <ul className="space-y-2 text-xs">
               {SERVICES_DATA.map((srv) => (
                 <li key={srv.id}>
@@ -162,9 +162,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBookingModal, onNavigateHi
 
           {/* Col 4: Contact & Hours */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-white text-xs font-bold uppercase tracking-wider">
+            <h3 className="text-white text-xs font-bold uppercase tracking-wider">
               Nossas Unidades
-            </h4>
+            </h3>
             
             <div className="space-y-3.5 text-xs text-emerald-100/80">
               {/* Unidade 1 Lapa */}
