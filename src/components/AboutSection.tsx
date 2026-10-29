@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CLINIC_INFO } from '../data/clinicData';
 import { 
@@ -12,7 +12,8 @@ import {
   ShieldCheck,
   Sparkles,
   ArrowRight,
-  BookOpen
+  BookOpen,
+  Play
 } from 'lucide-react';
 
 interface AboutSectionProps {
@@ -21,6 +22,7 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, onNavigateHistory }) => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoIframeRef = useRef<HTMLIFrameElement>(null);
   const playerInstanceRef = useRef<any>(null);
 
@@ -218,19 +220,47 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
                 className="relative rounded-[2.2rem] overflow-hidden shadow-2xl border-4 border-white bg-slate-950 ring-1 ring-slate-900/10"
                 style={{ aspectRatio: '9 / 16' }}
               >
-                <iframe 
-                  ref={videoIframeRef}
-                  src="https://player.vimeo.com/video/1231391663?dnt=1&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479%2Fembed" 
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen 
-                  loading="lazy"
-                  width="320"
-                  height="568"
-                  title="Apresentação Sorriso Reality"
-                  onLoad={handleIframeLoad}
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+                {!isVideoPlaying ? (
+                  <div className="absolute inset-0 w-full h-full">
+                    <img 
+                      src="/images/clinic_interior.webp" 
+                      alt="Consultório Sorriso Reality Clínicas Odontológicas" 
+                      width="320" 
+                      height="568" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/30 flex flex-col items-center justify-center p-6 text-center">
+                      <button
+                        type="button"
+                        onClick={() => setIsVideoPlaying(true)}
+                        aria-label="Assistir ao vídeo de apresentação da Sorriso Reality"
+                        className="w-16 h-16 rounded-full bg-[#008744] hover:bg-[#007038] text-white flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-200 mb-4 cursor-pointer group"
+                      >
+                        <Play className="w-7 h-7 fill-white text-white ml-1 group-hover:scale-105 transition-transform" />
+                      </button>
+                      <h4 className="text-white font-extrabold text-sm sm:text-base leading-tight mb-1">
+                        Tour pela Clínica Sorriso Reality
+                      </h4>
+                      <p className="text-emerald-200/90 text-xs font-medium">
+                        Conheça nossa estrutura na Lapa (30s)
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <iframe 
+                    ref={videoIframeRef}
+                    src="https://player.vimeo.com/video/1231391663?autoplay=1&dnt=1&title=0&byline=0&portrait=0&badge=0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen 
+                    width="320"
+                    height="568"
+                    title="Apresentação Sorriso Reality"
+                    onLoad={handleIframeLoad}
+                    className="absolute inset-0 w-full h-full border-0"
+                  />
+                )}
               </div>
 
               {/* Caption & Fallback Tag */}

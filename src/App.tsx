@@ -5,8 +5,6 @@ import { FeatureBar } from './components/FeatureBar';
 import { ServicesSection } from './components/ServicesSection';
 import { AboutSection } from './components/AboutSection';
 import { AppointmentSimulator } from './components/AppointmentSimulator';
-import { Testimonials } from './components/Testimonials';
-import { InstagramSection } from './components/InstagramSection';
 import { LocationSection } from './components/LocationSection';
 import { ServiceAreaSection } from './components/ServiceAreaSection';
 import { FaqSection } from './components/FaqSection';
@@ -15,6 +13,8 @@ import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 
+const Testimonials = lazy(() => import('./components/Testimonials').then(m => ({ default: m.Testimonials })));
+const InstagramSection = lazy(() => import('./components/InstagramSection').then(m => ({ default: m.InstagramSection })));
 const HistoryPage = lazy(() => import('./components/HistoryPage').then(m => ({ default: m.HistoryPage })));
 const BookingModal = lazy(() => import('./components/BookingModal').then(m => ({ default: m.BookingModal })));
 
@@ -106,10 +106,14 @@ export default function App() {
             </section>
 
             {/* Patient Reviews & Loved by Our Patients */}
-            <Testimonials />
+            <Suspense fallback={null}>
+              <Testimonials />
+            </Suspense>
 
             {/* Live Instagram Feed Embed */}
-            <InstagramSection />
+            <Suspense fallback={null}>
+              <InstagramSection />
+            </Suspense>
 
             {/* Location, Map & Public Transport Guide in Lapa */}
             <LocationSection />
