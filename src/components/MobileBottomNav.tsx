@@ -42,6 +42,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenBookingM
           <button
             type="button"
             onClick={() => setActiveSheet('call')}
+            aria-label="Ligar para a clínica"
             className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors cursor-pointer"
           >
             <Phone className="w-5 h-5 text-[#008744] mb-0.5" />
@@ -52,6 +53,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenBookingM
           <button
             type="button"
             onClick={() => setActiveSheet('whatsapp')}
+            aria-label="Falar no WhatsApp com a clínica"
             className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors cursor-pointer"
           >
             <MessageCircle className="w-5 h-5 text-emerald-600 mb-0.5" />
@@ -62,6 +64,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenBookingM
           <button
             type="button"
             onClick={() => setActiveSheet('maps')}
+            aria-label="Ver endereços e como chegar no mapa"
             className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-slate-700 hover:bg-slate-100 active:bg-slate-200 transition-colors cursor-pointer"
           >
             <MapPin className="w-5 h-5 text-emerald-700 mb-0.5" />
@@ -72,6 +75,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenBookingM
           <button
             type="button"
             onClick={() => onOpenBookingModal()}
+            aria-label="Solicitar avaliação gratuita sem agendamento"
             className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#008744] text-white shadow-sm active:bg-[#005a2b] transition-colors cursor-pointer"
           >
             <CalendarCheck className="w-5 h-5 mb-0.5" />

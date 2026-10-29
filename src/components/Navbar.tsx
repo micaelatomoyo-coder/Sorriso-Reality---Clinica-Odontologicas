@@ -185,6 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={() => onOpenBookingModal()}
+              aria-label="Agendar avaliação odontológica gratuita"
               className="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#008744] hover:bg-[#007038] transition-colors"
             >
               Avaliação
@@ -192,7 +193,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-700 hover:text-[#008744] hover:bg-slate-100 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#008744]"
-              aria-label="Abrir menu"
+              aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

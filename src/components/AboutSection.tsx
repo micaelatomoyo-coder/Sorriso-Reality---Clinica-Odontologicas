@@ -117,12 +117,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               className="bg-white rounded-3xl p-5 sm:p-6 shadow-md border border-slate-200/90 flex flex-col sm:flex-row items-center sm:items-start gap-5 hover:shadow-lg transition-all"
             >
               <div className="relative shrink-0">
-                <img
-                  src="/images/dentist_ricardo.png"
-                  alt="Dr. José Ricardo Guerra - CRO-SP 66.961"
-                  className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl object-cover object-top border-2 border-emerald-500 shadow-sm"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet="/images/dentist_ricardo.webp" type="image/webp" />
+                  <img
+                    src="/images/dentist_ricardo.png"
+                    alt="Dr. José Ricardo Guerra - CRO-SP 66.961"
+                    className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl object-cover object-top border-2 border-emerald-500 shadow-sm"
+                    width="128"
+                    height="160"
+                    loading="lazy"
+                  />
+                </picture>
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap shadow-xs">
                   CRO-SP 66.961
                 </span>
@@ -157,12 +162,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBookingModal, 
               className="bg-white rounded-3xl p-5 sm:p-6 shadow-md border border-slate-200/90 flex flex-col sm:flex-row items-center sm:items-start gap-5 hover:shadow-lg transition-all"
             >
               <div className="relative shrink-0">
-                <img
-                  src="/images/dentist_henrique.png"
-                  alt="Dr. José Henrique Guerra - CRO-SP 97.458"
-                  className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl object-cover object-top border-2 border-emerald-500 shadow-sm"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet="/images/dentist_henrique.webp" type="image/webp" />
+                  <img
+                    src="/images/dentist_henrique.png"
+                    alt="Dr. José Henrique Guerra - CRO-SP 97.458"
+                    className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl object-cover object-top border-2 border-emerald-500 shadow-sm"
+                    width="128"
+                    height="160"
+                    loading="lazy"
+                  />
+                </picture>
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[#008744] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap shadow-xs">
                   CRO-SP 97.458
                 </span>

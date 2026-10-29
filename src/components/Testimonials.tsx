@@ -1,32 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Star, CheckCircle2, ExternalLink } from 'lucide-react';
+import { loadElfsightWhenNear } from '../utils/lazyElfsight';
 
 export const Testimonials: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    // If the Elfsight script is already loaded, trigger platform update/init
-    const win = window as any;
-    if (win.eapps?.platform?.init) {
-      try {
-        win.eapps.platform.init();
-      } catch (err) {
-        console.warn('Elfsight platform init error:', err);
-      }
-    } else {
-      // Ensure platform.js is present
-      const scriptId = 'elfsight-platform-script';
-      if (!document.getElementById(scriptId)) {
-        const script = document.createElement('script');
-        script.id = scriptId;
-        script.src = 'https://elfsightcdn.com/platform.js';
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    }
+    const cleanup = loadElfsightWhenNear(sectionRef.current, '300px');
+    return cleanup;
   }, []);
 
   return (
-    <section id="depoimentos" className="py-16 sm:py-24 bg-slate-50/70 relative overflow-hidden">
+    <section ref={sectionRef} id="depoimentos" className="py-16 sm:py-24 bg-slate-50/70 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

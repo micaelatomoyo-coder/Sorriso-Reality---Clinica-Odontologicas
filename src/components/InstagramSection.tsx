@@ -1,33 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Sparkles, ExternalLink, Heart } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import { loadElfsightWhenNear } from '../utils/lazyElfsight';
 
 export const InstagramSection: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    // If the Elfsight script is already loaded, trigger platform update/init
-    const win = window as any;
-    if (win.eapps?.platform?.init) {
-      try {
-        win.eapps.platform.init();
-      } catch (err) {
-        console.warn('Elfsight platform init error:', err);
-      }
-    } else {
-      // Ensure platform.js is present
-      const scriptId = 'elfsight-platform-script';
-      if (!document.getElementById(scriptId)) {
-        const script = document.createElement('script');
-        script.id = scriptId;
-        script.src = 'https://elfsightcdn.com/platform.js';
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    }
+    const cleanup = loadElfsightWhenNear(sectionRef.current, '300px');
+    return cleanup;
   }, []);
 
   return (
-    <section id="instagram" className="py-16 sm:py-24 bg-gradient-to-b from-white via-emerald-50/25 to-white relative overflow-hidden">
+    <section ref={sectionRef} id="instagram" className="py-16 sm:py-24 bg-gradient-to-b from-white via-emerald-50/25 to-white relative overflow-hidden">
       {/* Decorative subtle background elements */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-r from-pink-500/5 via-emerald-500/5 to-purple-500/5 blur-3xl pointer-events-none -z-10" />
 

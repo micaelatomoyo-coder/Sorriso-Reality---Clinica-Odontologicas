@@ -49,11 +49,17 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose, on
           >
             {/* Modal Header Image */}
             <div className="relative h-48 sm:h-56 w-full bg-slate-900 overflow-hidden shrink-0">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover opacity-90"
-              />
+              <picture>
+                <source srcSet={service.image.replace(/\.(jpg|jpeg|png)$/, '.webp')} type="image/webp" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover opacity-90"
+                  width="600"
+                  height="224"
+                  loading="lazy"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               
               <button

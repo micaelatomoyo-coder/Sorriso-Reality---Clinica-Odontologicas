@@ -34,10 +34,21 @@
     <meta name="twitter:description" content="Avaliação gratuita, equipe especializada e 2 unidades em São Paulo: Lapa (R. Doze de Outubro) e Freguesia do Ó (Av. Itaberaba)." />
     <meta name="twitter:image" content="/logosr1.png" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="/images/hero_patient.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Google Fonts (Non render-blocking with preload) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      rel="preload" 
+      as="style" 
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" 
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
     
     <!-- Schema.org JSON-LD Structured Data for Local Business / Dentist Clinic -->
     <script type="application/ld+json">
@@ -118,8 +129,6 @@
     }
     </script>
 
-    <!-- Elfsight Platform Script -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
     
     <!-- Third-Party Embeds & ResizeObserver Error Suppressor -->
     <script>

@@ -31,6 +31,8 @@ export const Logo: React.FC<LogoProps> = ({
           <img
             src={logoImg}
             alt="Sorriso Reality Clínicas Odontológicas"
+            width="280"
+            height="121"
             className={`${heightClasses} w-auto max-w-[240px] sm:max-w-[280px] object-contain`}
             loading="eager"
           />
@@ -44,6 +46,8 @@ export const Logo: React.FC<LogoProps> = ({
       <img
         src={logoImg}
         alt="Sorriso Reality Clínicas Odontológicas"
+        width="280"
+        height="121"
         className={`${heightClasses} w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] object-contain transition-transform duration-300 hover:scale-[1.02]`}
         loading="eager"
       />

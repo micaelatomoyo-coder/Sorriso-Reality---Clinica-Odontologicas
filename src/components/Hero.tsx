@@ -26,12 +26,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
         and a soft neutral blurred clinic background (heavy bokeh depth-of-field).
       */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[54%] xl:w-[58%] h-full z-0 pointer-events-none select-none">
-        <img
-          src="/images/hero_patient.jpg"
-          alt="Paciente sorridente com dentes brancos na moderna cadeira odontológica verde da clínica Sorriso Reality na Lapa"
-          className="w-full h-full object-cover object-[right_center] lg:object-[82%_center]"
-          loading="eager"
-        />
+        <picture>
+          <source srcSet="/images/hero_patient.webp" type="image/webp" />
+          <img
+            src="/images/hero_patient.jpg"
+            alt="Paciente sorridente com dentes brancos na moderna cadeira odontológica verde da clínica Sorriso Reality na Lapa"
+            className="w-full h-full object-cover object-[right_center] lg:object-[82%_center]"
+            width="1200"
+            height="670"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
 
         {/* 
           Desktop Left-to-Right Soft Fade:

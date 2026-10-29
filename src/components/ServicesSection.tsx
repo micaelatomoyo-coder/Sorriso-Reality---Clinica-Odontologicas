@@ -102,12 +102,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBookingM
             >
               {/* Card Image Frame */}
               <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet={service.image.replace(/\.(jpg|jpeg|png)$/, '.webp')} type="image/webp" />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    width="400"
+                    height="208"
+                    loading="lazy"
+                  />
+                </picture>
 
                 {/* Floating Category Icon Badge */}
                 <div className="absolute -bottom-4 left-6 w-12 h-12 rounded-2xl bg-white text-[#008744] shadow-md flex items-center justify-center border border-emerald-100 group-hover:bg-[#008744] group-hover:text-white transition-colors duration-300">

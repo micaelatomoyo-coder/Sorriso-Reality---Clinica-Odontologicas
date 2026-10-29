@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { FeatureBar } from './components/FeatureBar';
 import { ServicesSection } from './components/ServicesSection';
 import { AboutSection } from './components/AboutSection';
-import { HistoryPage } from './components/HistoryPage';
 import { AppointmentSimulator } from './components/AppointmentSimulator';
 import { Testimonials } from './components/Testimonials';
 import { InstagramSection } from './components/InstagramSection';
@@ -14,7 +13,9 @@ import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
-import { BookingModal } from './components/BookingModal';
+
+const HistoryPage = lazy(() => import('./components/HistoryPage').then(m => ({ default: m.HistoryPage })));
+const BookingModal = lazy(() => import('./components/BookingModal').then(m => ({ default: m.BookingModal })));
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'historia'>(() => {
@@ -75,10 +76,12 @@ export default function App() {
       {/* Main Content: Render dedicated 26 Anos History Page OR Home Landing Sections */}
       <main className="flex-1">
         {currentPage === 'historia' ? (
-          <HistoryPage 
-            onBackToHome={navigateToHome} 
-            onOpenBookingModal={handleOpenBookingModal} 
-          />
+          <Suspense fallback={<div className="min-h-screen bg-slate-50 flex items-center justify-center py-20 text-slate-400">Carregando história...</div>}>
+            <HistoryPage 
+              onBackToHome={navigateToHome} 
+              onOpenBookingModal={handleOpenBookingModal} 
+            />
+          </Suspense>
         ) : (
           <>
             {/* Hero Section */}
@@ -132,11 +135,15 @@ export default function App() {
       <WhatsAppFloatingButton />
 
       {/* Booking / Walk-in Modal */}
-      <BookingModal
-        isOpen={bookingModalOpen}
-        initialService={selectedServiceForModal}
-        onClose={handleCloseBookingModal}
-      />
+      {bookingModalOpen && (
+        <Suspense fallback={null}>
+          <BookingModal
+            isOpen={bookingModalOpen}
+            initialService={selectedServiceForModal}
+            onClose={handleCloseBookingModal}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

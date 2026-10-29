@@ -161,11 +161,17 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
             {/* The Founders Photo Showcase - Authentic newspaper photo */}
             <div className="md:col-span-5 bg-white p-3 sm:p-4 rounded-2xl border border-slate-200 shadow-sm">
               <div className="relative w-full rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xs group">
-                <img
-                  src="/images/fotodentistas.png"
-                  alt="Dr. José Ricardo Guerra e Dr. José Henrique Guerra - Sorriso Reality 26 anos"
-                  className="w-full h-auto object-cover"
-                />
+                <picture>
+                  <source srcSet="/images/fotodentistas.webp" type="image/webp" />
+                  <img
+                    src="/images/fotodentistas.png"
+                    alt="Dr. José Ricardo Guerra e Dr. José Henrique Guerra - Sorriso Reality 26 anos"
+                    width="700"
+                    height="532"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </picture>
                 <div className="absolute top-2.5 left-2.5 bg-[#008744]/95 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs">
                   Foto Real da Reportagem
                 </div>
@@ -328,11 +334,17 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ onBackToHome, onOpenBo
                 <div>
                   <div className="flex items-start gap-4 mb-5">
                     <div className="w-24 h-28 rounded-2xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200 shadow-xs">
-                      <img
-                        src={founder.image}
-                        alt={founder.name}
-                        className="w-full h-full object-cover object-top"
-                      />
+                      <picture>
+                        <source srcSet={founder.image.replace(/\.(png|jpg|jpeg)$/, '.webp')} type="image/webp" />
+                        <img
+                          src={founder.image}
+                          alt={founder.name}
+                          width="96"
+                          height="112"
+                          className="w-full h-full object-cover object-top"
+                          loading="lazy"
+                        />
+                      </picture>
                     </div>
                     <div>
                       <span className="inline-block text-[11px] font-bold text-[#008744] uppercase tracking-wider">
