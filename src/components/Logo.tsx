@@ -28,14 +28,17 @@ export const Logo: React.FC<LogoProps> = ({
     return (
       <div className={`inline-flex items-center select-none ${className}`}>
         <div className="bg-white/95 px-3.5 py-1.5 rounded-xl shadow-xs inline-flex items-center transition-transform duration-300 hover:scale-[1.02]">
-          <img
-            src={logoImg}
-            alt="Sorriso Reality Clínicas Odontológicas"
-            width="280"
-            height="121"
-            className={`${heightClasses} w-auto max-w-[240px] sm:max-w-[280px] object-contain`}
-            loading="eager"
-          />
+          <picture>
+            <source srcSet="/logosr1.webp" type="image/webp" />
+            <img
+              src={logoImg}
+              alt="Sorriso Reality Clínicas Odontológicas"
+              width="166"
+              height="72"
+              className={`${heightClasses} w-auto max-w-[240px] sm:max-w-[280px] object-contain`}
+              loading="eager"
+            />
+          </picture>
         </div>
       </div>
     );
@@ -43,14 +46,17 @@ export const Logo: React.FC<LogoProps> = ({
 
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
-      <img
-        src={logoImg}
-        alt="Sorriso Reality Clínicas Odontológicas"
-        width="280"
-        height="121"
-        className={`${heightClasses} w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] object-contain transition-transform duration-300 hover:scale-[1.02]`}
-        loading="eager"
-      />
+      <picture>
+        <source srcSet="/logosr1.webp" type="image/webp" />
+        <img
+          src={logoImg}
+          alt="Sorriso Reality Clínicas Odontológicas"
+          width="166"
+          height="72"
+          className={`${heightClasses} w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] object-contain transition-transform duration-300 hover:scale-[1.02]`}
+          loading="eager"
+        />
+      </picture>
     </div>
   );
 };
